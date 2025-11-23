@@ -19,9 +19,172 @@ Get a token using the `/auth` endpoint with a valid ABHA ID.
 
 ---
 
-## Core Endpoints
+## 📋 API Endpoints
 
-### Health Check
+### 🔍 **Search & Translation Endpoints**
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| `GET` | `/search` | Search NAMASTE terminology | ❌ |
+| `GET` | `/suggest` | Get AI-powered suggestions | ❌ |
+| `GET` | `/translate` | Translate between coding systems | ❌ |
+
+### 🏥 **FHIR Resource Endpoints**
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| `GET` | `/codesystem` | Get FHIR CodeSystem resource | ❌ |
+| `GET` | `/conceptmap` | Get FHIR ConceptMap resource | ❌ |
+| `POST` | `/fhir/problem-list` | Create FHIR Problem List entry | ✅ |
+
+### 🌍 **WHO ICD-11 Integration Endpoints**
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| `GET` | `/who/tm2/search` | Search WHO ICD-11 TM2 entities | ❌ |
+| `GET` | `/who/biomedicine/search` | Search WHO ICD-11 Biomedicine | ❌ |
+
+### 🔬 **SNOMED CT & LOINC Endpoints**
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| `GET` | `/snomed/search` | Search SNOMED CT concepts | ❌ |
+| `GET` | `/loinc/search` | Search LOINC codes | ❌ |
+
+### 🔐 **Authentication & Access Control Endpoints**
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| `POST` | `/auth` | Authenticate with ABHA ID | ❌ |
+| `POST` | `/consent` | Create FHIR Consent resource | ✅ |
+| `POST` | `/access-check` | Check resource access permissions | ✅ |
+
+### 📊 **Data Management Endpoints**
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| `POST` | `/ingest-csv` | Upload CSV terminology data | ❌ |
+| `POST` | `/ingest-default` | Load default NAMASTE dataset | ❌ |
+| `POST` | `/ingest-bundle` | Ingest FHIR Bundle | ✅ |
+
+### 📈 **Analytics & Monitoring Endpoints**
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| `GET` | `/health` | Health check | ❌ |
+| `GET` | `/audit` | Get audit log entries | ❌ |
+| `GET` | `/provenance` | Get provenance log entries | ❌ |
+| `GET` | `/stats/top-terms` | Get top NAMASTE terms | ❌ |
+| `GET` | `/stats/dual-coding-rate` | Get dual coding statistics | ❌ |
+
+---
+
+## 🚀 Quick Start
+
+### 1. **Health Check**
+```bash
+GET /health
+```
+
+### 2. **Search Terminology**
+```bash
+GET /search?q=amlapitta
+```
+
+### 3. **Translate Codes**
+```bash
+GET /translate?code=AY001&system=namaste
+```
+
+### 4. **Get Authentication Token**
+```bash
+POST /auth?abha_id=123456789012
+```
+
+---
+
+## 📖 Detailed Endpoint Documentation
+
+### 🔍 Search & Translation Endpoints
+
+#### `GET /search`
+Search NAMASTE terminology by query string.
+
+**Parameters:**
+- `q` (string, required) - Search query (minimum 1 character)
+
+**Example:**
+```bash
+GET /search?q=amlapitta
+```
+
+**Response:**
+```json
+{
+  "matches": [
+    {
+      "code": "AY001",
+      "label": "Amlapitta",
+      "confidence": 0.95
+    }
+  ],
+  "count": 1
+}
+```
+
+#### `GET /suggest`
+Get AI-powered suggestions with confidence scores.
+
+**Parameters:**
+- `q` (string, required) - Search query (minimum 1 character)
+
+**Example:**
+```bash
+GET /suggest?q=amlapitta
+```
+
+**Response:**
+```json
+{
+  "suggestions": [
+    {
+      "label": "Amlapitta",
+      "namaste_code": "AY001",
+      "confidence": 95
+    }
+  ]
+}
+```
+
+#### `GET /translate`
+Translate between NAMASTE and ICD-11 coding systems.
+
+**Parameters:**
+- `code` (string, required) - Code to translate
+- `system` (string, required) - Source system (`namaste` or `icd11`)
+
+**Examples:**
+```bash
+GET /translate?code=AY001&system=namaste
+GET /translate?code=TM2-AY134&system=icd11
+```
+
+**Response:**
+```json
+{
+  "targets": [
+    {
+      "code": "TM2-AY134",
+      "title": "Acid dyspepsia (TM2)",
+      "system": "ICD-11"
+    }
+  ]
+}
+```
+
+---
+
+### 🏥 FHIR Resource Endpoints
 
 #### `GET /health`
 Check if the service is running.

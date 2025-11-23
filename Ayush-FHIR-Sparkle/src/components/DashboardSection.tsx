@@ -1,6 +1,7 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3 } from "lucide-react";
+import { buildApiUrl, API_CONFIG } from "@/config/api";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -39,13 +40,13 @@ export const DashboardSection = () => {
   const loadDashboard = async () => {
     try {
       const [topResponse, rateResponse] = await Promise.all([
-        fetch('/stats/top-terms'),
-        fetch('/stats/dual-coding-rate')
+        fetch(buildApiUrl(API_CONFIG.ENDPOINTS.STATS_TOP_TERMS)),
+        fetch(buildApiUrl(API_CONFIG.ENDPOINTS.STATS_DUAL_CODING))
       ]);
-      
+
       const topData = await topResponse.json();
       const rateData = await rateResponse.json();
-      
+
       setTopTerms(topData.items || []);
       setStatsData(rateData);
     } catch (error) {
@@ -57,10 +58,10 @@ export const DashboardSection = () => {
 
   useEffect(() => {
     loadDashboard();
-    
+
     // Expose loadDashboard to window for external calls
     (window as any).loadDashboard = loadDashboard;
-    
+
     return () => {
       delete (window as any).loadDashboard;
     };
@@ -118,7 +119,7 @@ export const DashboardSection = () => {
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-xl">
           <BarChart3 className="h-5 w-5 text-primary" />
-          8) Dashboard &amp; Analytics
+          Dashboard &amp; Analytics
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -138,7 +139,7 @@ export const DashboardSection = () => {
             <div className="text-sm text-muted-foreground">Loading statistics...</div>
           )}
         </div>
-        
+
         <div className="bg-gradient-to-r from-primary-light to-accent rounded-xl p-6">
           <div className="h-80">
             {topTerms.length > 0 ? (

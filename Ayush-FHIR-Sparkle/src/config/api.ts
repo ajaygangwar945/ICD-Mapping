@@ -1,10 +1,8 @@
 // API Configuration
-const API_BASE_URL = 'https://your-username-ayush-fhir.hf.space';
-
-
-
+// For local development, use localhost:8000
 // For Hugging Face deployment, set this to your backend URL
 // Example: 'https://your-username-ayush-fhir.hf.space'
+const API_BASE_URL = 'http://localhost:8000';
 export const API_CONFIG = {
   BASE_URL: API_BASE_URL,
   ENDPOINTS: {

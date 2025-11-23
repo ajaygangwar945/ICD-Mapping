@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Upload, FileText, Database, Sparkles, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { buildApiUrl, API_CONFIG } from "@/config/api";
 
 interface ModernCSVIngestSectionProps {
   onIngestComplete: () => void;
@@ -43,12 +44,12 @@ export const ModernCSVIngestSection = ({ onIngestComplete }: ModernCSVIngestSect
     try {
       const formData = new FormData();
       formData.append('file', acceptedFiles[0]);
-      
-      const response = await fetch('/ingest-csv', {
+
+      const response = await fetch(buildApiUrl(API_CONFIG.ENDPOINTS.INGEST_CSV), {
         method: 'POST',
         body: formData
       });
-      
+
       const result = await response.json();
       setIngestResult(JSON.stringify(result));
       setSuccess(true);
@@ -72,7 +73,7 @@ export const ModernCSVIngestSection = ({ onIngestComplete }: ModernCSVIngestSect
   const handleLoadDefault = async () => {
     setIsLoadingDefault(true);
     try {
-      const response = await fetch('/ingest-default', { method: 'POST' });
+      const response = await fetch(buildApiUrl(API_CONFIG.ENDPOINTS.INGEST_DEFAULT), { method: 'POST' });
       const result = await response.json();
       setIngestResult(JSON.stringify(result));
       setSuccess(true);
@@ -111,11 +112,10 @@ export const ModernCSVIngestSection = ({ onIngestComplete }: ModernCSVIngestSect
           <div className="flex-1 w-full">
             <div
               {...getRootProps()}
-              className={`border-2 border-dashed rounded-2xl p-8 text-center cursor-pointer transition-all duration-300 ${
-                isDragActive
+              className={`border-2 border-dashed rounded-2xl p-8 text-center cursor-pointer transition-all duration-300 ${isDragActive
                   ? "border-success bg-success/10 scale-105"
                   : "border-success/30 hover:border-success/60 hover:bg-success/5"
-              } ${success ? "border-success bg-success/10" : ""}`}
+                } ${success ? "border-success bg-success/10" : ""}`}
             >
               <input {...getInputProps()} />
               {acceptedFiles.length > 0 ? (
@@ -147,7 +147,7 @@ export const ModernCSVIngestSection = ({ onIngestComplete }: ModernCSVIngestSect
               )}
             </div>
           </div>
-          
+
           <div className="flex flex-col gap-3">
             <Button
               onClick={handleUpload}
@@ -186,7 +186,7 @@ export const ModernCSVIngestSection = ({ onIngestComplete }: ModernCSVIngestSect
             </Button>
           </div>
         </div>
-        
+
         {ingestResult && (
           <div className="space-y-3">
             <div className="flex items-center gap-2">

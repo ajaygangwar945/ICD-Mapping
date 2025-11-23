@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Upload, FileText, Database } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { buildApiUrl, API_CONFIG } from "@/config/api";
 
 interface CSVIngestSectionProps {
   onIngestComplete: () => void;
@@ -41,12 +42,12 @@ export const CSVIngestSection = ({ onIngestComplete }: CSVIngestSectionProps) =>
     try {
       const formData = new FormData();
       formData.append('file', acceptedFiles[0]);
-      
-      const response = await fetch('/ingest-csv', {
+
+      const response = await fetch(buildApiUrl(API_CONFIG.ENDPOINTS.INGEST_CSV), {
         method: 'POST',
         body: formData
       });
-      
+
       const result = await response.json();
       setIngestResult(JSON.stringify(result));
       onIngestComplete();
@@ -69,7 +70,7 @@ export const CSVIngestSection = ({ onIngestComplete }: CSVIngestSectionProps) =>
   const handleLoadDefault = async () => {
     setIsLoadingDefault(true);
     try {
-      const response = await fetch('/ingest-default', { method: 'POST' });
+      const response = await fetch(buildApiUrl(API_CONFIG.ENDPOINTS.INGEST_DEFAULT), { method: 'POST' });
       const result = await response.json();
       setIngestResult(JSON.stringify(result));
       onIngestComplete();
@@ -102,11 +103,10 @@ export const CSVIngestSection = ({ onIngestComplete }: CSVIngestSectionProps) =>
           <div className="flex-1">
             <div
               {...getRootProps()}
-              className={`border-2 border-dashed rounded-lg p-6 text-center cursor-pointer transition-colors ${
-                isDragActive
+              className={`border-2 border-dashed rounded-lg p-6 text-center cursor-pointer transition-colors ${isDragActive
                   ? "border-primary bg-primary-light"
                   : "border-muted-foreground/25 hover:border-primary/50 hover:bg-primary-light/50"
-              }`}
+                }`}
             >
               <input {...getInputProps()} />
               {acceptedFiles.length > 0 ? (
@@ -126,7 +126,7 @@ export const CSVIngestSection = ({ onIngestComplete }: CSVIngestSectionProps) =>
               )}
             </div>
           </div>
-          
+
           <div className="flex gap-2">
             <Button
               onClick={handleUpload}
@@ -145,7 +145,7 @@ export const CSVIngestSection = ({ onIngestComplete }: CSVIngestSectionProps) =>
             </Button>
           </div>
         </div>
-        
+
         {ingestResult && (
           <div className="mt-4">
             <pre className="bg-muted border rounded-lg p-3 text-xs overflow-auto max-h-32 text-muted-foreground">
