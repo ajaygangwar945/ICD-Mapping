@@ -552,7 +552,7 @@ The system is fully functional and ready for hackathon demonstration with:
 - **APIs**: `POST /fhir/problem-list?namaste_code=...` | `POST /access-check?...`
 - **Outcome**: FHIR Condition with NAMASTE + ICD‑11 codings
 
-### 8️⃣ Dashboard & Analytics
+### Dashboard & Analytics
 - **Why**: Quick insight into coverage and top-used terms
 - **How (UI)**: Loads automatically on page open
 - **APIs**: `GET /stats/top-terms` | `GET /stats/dual-coding-rate`
