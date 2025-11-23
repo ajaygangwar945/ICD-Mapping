@@ -238,13 +238,13 @@ For complete API documentation, visit: `http://localhost:8000/docs`
 
 ### 🏠 Main Sections
 
-1. **📊 Dashboard** - System statistics and analytics
-2. **📤 CSV Ingest** - Data upload and management
-3. **🔍 Search & Translate** - Term lookup and conversion
-4. **🔐 Authentication** - ABHA OAuth integration
-5. **📋 Problem List** - Dual-coded clinical entries
-6. **🔒 Access Control** - ISO 22600 compliance
-7. **📜 Audit & Provenance** - Compliance tracking
+- **📊 Dashboard** - System statistics and analytics
+- **📤 CSV Ingest** - Data upload and management
+- **🔍 Search & Translate** - Term lookup and conversion
+- **🔐 Authentication** - ABHA OAuth integration
+- **📋 Problem List** - Dual-coded clinical entries
+- **🔒 Access Control** - ISO 22600 compliance
+- **📜 Audit & Provenance** - Compliance tracking
 
 ### 🎨 Design System
 
