@@ -1,10 +1,10 @@
-# Connection Summary: Ayush-FHIR Backend ↔ Ayush-FHIR-Sparkle Frontend
+# Connection Summary: ayush-fhir Backend ↔ ayush-fhir-sparkle Frontend
 
 ## ✅ Changes Completed
 
-### 1. Backend Configuration (Ayush-FHIR)
+### 1. Backend Configuration (ayush-fhir)
 
-**File**: `c:\Users\ajayg\Event\SIH 25026\ICD-Mapping\Ayush-FHIR\app\main.py`
+**File**: `c:\Users\ajayg\Event\SIH 25026\ICD-Mapping\ayush-fhir\app\main.py`
 
 ✅ **Added CORS Middleware** to allow cross-origin requests from the React frontend:
 ```python
@@ -24,9 +24,9 @@ app.add_middleware(
 )
 ```
 
-### 2. Frontend Configuration (Ayush-FHIR-Sparkle)
+### 2. Frontend Configuration (ayush-fhir-sparkle)
 
-**File**: `c:\Users\ajayg\Event\SIH 25026\ICD-Mapping\Ayush-FHIR-Sparkle\src\config\api.ts`
+**File**: `c:\Users\ajayg\Event\SIH 25026\ICD-Mapping\ayush-fhir-sparkle\src\config\api.ts`
 
 ✅ **Updated API Base URL** from Hugging Face placeholder to local backend:
 ```typescript
@@ -38,7 +38,7 @@ const API_BASE_URL = 'http://localhost:8000';
 ### Terminal 1: Start Backend (Port 8000)
 
 ```powershell
-cd "c:\Users\ajayg\Event\SIH 25026\ICD-Mapping\Ayush-FHIR"
+cd "c:\Users\ajayg\Event\SIH 25026\ICD-Mapping\ayush-fhir"
 
 # Activate virtual environment (if not already activated)
 .\venv\Scripts\activate
@@ -64,7 +64,7 @@ INFO:     Application startup complete.
 ### Terminal 2: Start Frontend (Port 8080)
 
 ```powershell
-cd "c:\Users\ajayg\Event\SIH 25026\ICD-Mapping\Ayush-FHIR-Sparkle"
+cd "c:\Users\ajayg\Event\SIH 25026\ICD-Mapping\ayush-fhir-sparkle"
 
 # Start Vite dev server
 npm run dev
@@ -113,7 +113,7 @@ Once both servers are running, test the connection:
 
 ```
 c:\Users\ajayg\Event\SIH 25026\ICD-Mapping\
-├── Ayush-FHIR\              # Backend (FastAPI/Python)
+├── ayush-fhir\              # Backend (FastAPI/Python)
 │   ├── app\
 │   │   ├── main.py          # ✅ CORS configured
 │   │   ├── api.py           # API endpoints
@@ -123,7 +123,7 @@ c:\Users\ajayg\Event\SIH 25026\ICD-Mapping\
 │   ├── requirements.txt
 │   └── venv\
 │
-└── Ayush-FHIR-Sparkle\      # Frontend (React/TypeScript/Vite)
+└── ayush-fhir-sparkle\      # Frontend (React/TypeScript/Vite)
     ├── src\
     │   ├── config\
     │   │   └── api.ts       # ✅ API URL configured

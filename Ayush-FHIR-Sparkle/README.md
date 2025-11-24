@@ -127,7 +127,7 @@ Make sure you have the following installed on your system:
 1️⃣ **Clone the repository**
 ```bash
 git clone <YOUR_REPO_URL>
-cd ICD-Mapping/Ayush-FHIR-Sparkle
+cd ICD-Mapping/ayush-fhir-sparkle
 ```
 
 2️⃣ **Install dependencies**
@@ -202,7 +202,7 @@ This frontend connects to the **Ayush-FHIR** FastAPI backend. Make sure the back
 
 ```bash
 # Navigate to backend directory
-cd ../Ayush-FHIR
+cd ../ayush-fhir
 
 # Activate virtual environment
 .\venv\Scripts\activate  # Windows

@@ -133,7 +133,7 @@ graph TD
 
 ```bash
 # 1️⃣ Navigate to project directory
-cd Ayush-FHIR
+cd ayush-fhir
 
 # 2️⃣ Create virtual environment
 python -m venv venv

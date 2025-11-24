@@ -4,7 +4,7 @@ services:
     name: ayush-fhir-backend
     env: python
     region: oregon
-    rootDir: Ayush-FHIR
+    rootDir: ayush-fhir
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
@@ -15,7 +15,7 @@ services:
   - type: static
     name: ayush-fhir-frontend
     region: oregon
-    rootDir: Ayush-FHIR-Sparkle
+    rootDir: ayush-fhir-sparkle
     buildCommand: npm install && npm run build
     publishPath: dist
     envVars:
