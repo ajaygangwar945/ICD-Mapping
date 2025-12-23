@@ -12,9 +12,15 @@
 [![FHIR](https://img.shields.io/badge/FHIR-R4-ff6b6b?style=for-the-badge&logo=hl7&logoColor=white)](https://www.hl7.org/fhir/)
 [![ICD-11](https://img.shields.io/badge/ICD--11-WHO-4dabf7?style=for-the-badge&logo=world-health-organization&logoColor=white)](https://icd.who.int/)
 
-![Healthcare Banner](https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80)
 
-**🚀 [Visit Live Application](https://icd-mapping.onrender.com) | 📚 [API Documentation](https://icd-mapping.onrender.com/docs) | 🎯 [Backend Repo](ayush-fhir/) | ⚡ [Frontend Repo](ayush-fhir-sparkle/)**
+
+<p align="center">
+  <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80" width="600"/>
+</p>
+
+
+**🚀 [Visit Live Application](https://icd-mapping.onrender.com) | 📚 [API Documentation](https://icd-mapping.onrender.com/docs) | 🎯 [Backend Repo](https://github.com/ajaygangwar945/ayush-fhir) |
+⚡ [Frontend Repo](https://github.com/ajaygangwar945/ayush-fhir-sparkle/)**
 
 </div>
 
@@ -481,6 +487,7 @@ This project is developed for the **Ministry of Ayush** hackathon and demonstrat
 
 ---
 
-**[⬆ Back to Top](#-icd-mapping-ayush-healthcare-interoperability-platform)**
+[![Back to Top](https://img.shields.io/badge/⬆_Back_to_Top-blue?style=for-the-badge)](#-icd-mapping-ayush-healthcare-interoperability-platform)
+
 
 </div>
