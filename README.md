@@ -18,28 +18,8 @@
   <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80" width="600"/>
 </p>
 
-
-**🚀 [Visit Live Application](https://icd-mapping.onrender.com) | 📚 [API Documentation](https://icd-mapping.onrender.com/docs) | 🎯 [Backend Repo](https://github.com/ajaygangwar945/ayush-fhir) |
-⚡ [Frontend Repo](https://github.com/ajaygangwar945/ayush-fhir-sparkle/)**
-
 </div>
 
----
-
-## 📋 Table of Contents
-
-- [✨ Overview](#-overview)
-- [🎯 Problem Statement](#-problem-statement)
-- [🌟 Key Features](#-key-features)
-- [🏗️ Architecture](#️-architecture)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [🚀 Quick Start](#-quick-start)
-- [📦 Project Structure](#-project-structure)
-- [🌐 Deployment](#-deployment)
-- [📡 API Endpoints](#-api-endpoints)
-- [🎨 Screenshots](#-screenshots)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
 
 ---
 
@@ -313,7 +293,7 @@ ICD-Mapping/
 
 ### 🚀 Live Application
 
-**🌐 Production URL:** [https://icd-mapping.onrender.com](https://icd-mapping.onrender.com)
+![Deployment](https://img.shields.io/badge/Deployed_on-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
 
 ### ☁️ Deployment Platform: Render.com
 
@@ -399,20 +379,6 @@ The `render.yaml` file contains the complete deployment configuration for both s
 
 ---
 
-## 🎨 Screenshots
-
-> **Note:** Visit the [live application](https://icd-mapping.onrender.com) to see the platform in action!
-
-### Key Features:
-- 📊 **Interactive Dashboard** with real-time analytics
-- 🔍 **Smart Search** with auto-complete and fuzzy matching
-- 🔄 **Dual Coding Interface** for NAMASTE ↔ ICD-11 translation
-- 📤 **CSV Upload** with drag-and-drop functionality
-- 🏥 **FHIR Problem List** creation with multiple coding systems
-- 📈 **Analytics Charts** showing usage patterns and coverage
-
----
-
 ## 🤝 Contributing
 
 We welcome contributions! Here's how you can help:
@@ -445,14 +411,6 @@ Found a bug? Please open an issue with:
 
 ---
 
-## 📄 License
-
-This project is developed for the **Ministry of Ayush** hackathon and demonstrates interoperability between traditional Indian medicine and global healthcare standards.
-
-**Category:** Software | **Theme:** MedTech / BioTech / HealthTech
-
----
-
 ## 🏆 Acknowledgments
 
 ### 🙏 Built For
@@ -479,15 +437,12 @@ This project is developed for the **Ministry of Ayush** hackathon and demonstrat
 
 ### 🌟 Built with ❤️ for Better Healthcare Interoperability
 
-**🚀 [Visit Live Application](https://icd-mapping.onrender.com)**
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/your-repo)
-[![Documentation](https://img.shields.io/badge/📚_API-Documentation-009688?style=for-the-badge)](https://icd-mapping.onrender.com/docs)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
-
----
-
-[![Back to Top](https://img.shields.io/badge/⬆_Back_to_Top-blue?style=for-the-badge)](#-icd-mapping-ayush-healthcare-interoperability-platform)
-
+<div align="center">
+  
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/ajaygangwar945/ICD-Mapping)
+[![Live](https://img.shields.io/badge/🌐_Live_App-Visit-success?style=for-the-badge)](https://icd-mapping.onrender.com)
+[![Docs](https://img.shields.io/badge/📚_API_Documentation-Swagger-009688?style=for-the-badge)](https://icd-mapping.onrender.com/docs)
 
 </div>
+
