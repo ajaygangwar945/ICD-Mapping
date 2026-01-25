@@ -63,7 +63,7 @@ export const WelcomeSection = () => {
   return (
     <section id="welcome-section" className="py-24 px-6 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
-      
+
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -72,8 +72,8 @@ export const WelcomeSection = () => {
             <span className="text-foreground/80">of Healthcare Interoperability</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Experience the next generation of medical data exchange with our comprehensive platform 
-            that seamlessly connects different healthcare coding systems, ensuring interoperability 
+            Experience the next generation of medical data exchange with our comprehensive platform
+            that seamlessly connects different healthcare coding systems, ensuring interoperability
             and compliance across the healthcare ecosystem.
           </p>
         </div>
@@ -111,6 +111,6 @@ export const WelcomeSection = () => {
 
 const Sparkles = ({ className }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-    <path d="M12 0l1.09 3.45L16 3l-2.91 1.09L12 7.5 10.91 4.09 8 3l3.09 1.45L12 0zm-6.18 9l-.87 2.75L2 11l2.95.75L6.82 15l.87-2.75L10 12l-2.95-.75L5.18 9zm12.36 6l-.87 2.75L14 17l2.95.75L18.82 21l.87-2.75L22 18l-2.95-.75L17.18 15z"/>
+    <path d="M12 0l1.09 3.45L16 3l-2.91 1.09L12 7.5 10.91 4.09 8 3l3.09 1.45L12 0zm-6.18 9l-.87 2.75L2 11l2.95.75L6.82 15l.87-2.75L10 12l-2.95-.75L5.18 9zm12.36 6l-.87 2.75L14 17l2.95.75L18.82 21l.87-2.75L22 18l-2.95-.75L17.18 15z" />
   </svg>
 );

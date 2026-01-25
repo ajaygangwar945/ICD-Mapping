@@ -32,7 +32,7 @@ export const ModernTranslateSection = ({ onTranslationComplete, initialQuery = "
 
   const handleTranslate = async () => {
     if (!code.trim()) return;
-    
+
     setIsTranslating(true);
     try {
       const response = await fetch(
@@ -95,7 +95,7 @@ export const ModernTranslateSection = ({ onTranslationComplete, initialQuery = "
           <div className="p-3 bg-gradient-purple rounded-2xl shadow-purple">
             <ArrowRightLeft className="h-6 w-6 text-white" />
           </div>
-          <span className="text-gradient">Step 3:</span> Code Translation
+          <span className="text-gradient"></span> Code Translation
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
@@ -115,8 +115,8 @@ export const ModernTranslateSection = ({ onTranslationComplete, initialQuery = "
               <SelectItem value="icd11">ICD-11</SelectItem>
             </SelectContent>
           </Select>
-          <Button 
-            onClick={handleTranslate} 
+          <Button
+            onClick={handleTranslate}
             disabled={isTranslating}
             className="btn-purple"
           >
@@ -137,8 +137,8 @@ export const ModernTranslateSection = ({ onTranslationComplete, initialQuery = "
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-            <Code2 className="h-5 w-5 text-purple" />
-            <span className="text-base font-semibold">Translation Results</span>
+              <Code2 className="h-5 w-5 text-purple" />
+              <span className="text-base font-semibold">Translation Results</span>
             </div>
             <div className="flex items-center gap-2">
               <Button variant="outline" size="sm" onClick={() => copyToClipboard(JSON.stringify(translateResult, null, 2))} disabled={translateResult.length === 0}>
@@ -149,7 +149,7 @@ export const ModernTranslateSection = ({ onTranslationComplete, initialQuery = "
               </Button>
             </div>
           </div>
-          
+
           {translateResult.length > 0 ? (
             <div className="space-y-3 max-h-64 overflow-auto">
               {translateResult.map((target, index) => (

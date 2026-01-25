@@ -55,7 +55,7 @@ export const FhirProblemSection = () => {
     const token = localStorage.getItem('token');
     if (!token) {
       toast({
-        title: "Authentication required", 
+        title: "Authentication required",
         description: "Please authenticate first",
         variant: "destructive"
       });
@@ -73,10 +73,10 @@ export const FhirProblemSection = () => {
           }
         }
       );
-      
+
       const data = await response.json();
       setProblemResult(JSON.stringify(data, null, 2));
-      
+
       toast({
         title: "Problem list created",
         description: "FHIR problem list entry has been created successfully"
@@ -108,7 +108,7 @@ export const FhirProblemSection = () => {
     if (!token) {
       toast({
         title: "Authentication required",
-        description: "Please authenticate first", 
+        description: "Please authenticate first",
         variant: "destructive"
       });
       return;
@@ -130,10 +130,10 @@ export const FhirProblemSection = () => {
           'Authorization': `Bearer ${token}`
         }
       });
-      
+
       const data = await response.json();
       setAccessResult(JSON.stringify(data, null, 2));
-      
+
       toast({
         title: "Access check completed",
         description: "Access control evaluation has been completed"
@@ -154,9 +154,11 @@ export const FhirProblemSection = () => {
   return (
     <Card className="card-fhir backdrop-blur-sm border-0 shadow-success rounded-3xl overflow-hidden">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-xl">
-          <FileText className="h-5 w-5 text-primary" />
-          7) FHIR Problem List with Dual Coding
+        <CardTitle className="flex items-center gap-3 text-2xl">
+          <div className="p-3 bg-gradient-success rounded-2xl shadow-success">
+            <FileText className="h-6 w-6 text-white" />
+          </div>
+          FHIR Problem List with Dual Coding
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -196,7 +198,7 @@ export const FhirProblemSection = () => {
               {problemResult || 'Problem list result will appear here...'}
             </pre>
           </div>
-          
+
           <div className="space-y-3">
             <h3 className="text-lg font-medium flex items-center gap-2">
               <Lock className="h-4 w-4 text-warning" />

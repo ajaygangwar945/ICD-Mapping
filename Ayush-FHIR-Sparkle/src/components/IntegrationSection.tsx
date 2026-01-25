@@ -53,7 +53,7 @@ export const IntegrationSection = ({ onIntegrationComplete, initialQuery = "" }:
 
   const handleWhoSearch = async () => {
     if (!whoQuery.trim()) return;
-    
+
     setIsSearchingWho(true);
     try {
       const response = await fetch(buildApiUrl(`${API_CONFIG.ENDPOINTS.WHO_TM2}?q=${encodeURIComponent(whoQuery)}`));
@@ -74,18 +74,18 @@ export const IntegrationSection = ({ onIntegrationComplete, initialQuery = "" }:
 
   const handleSemanticSearch = async () => {
     if (!semanticQuery.trim()) return;
-    
+
     setIsSearchingSemantic(true);
     try {
       const [snomedResponse, loincResponse] = await Promise.all([
         fetch(buildApiUrl(`${API_CONFIG.ENDPOINTS.SNOMED}?q=${encodeURIComponent(semanticQuery)}`)),
         fetch(buildApiUrl(`${API_CONFIG.ENDPOINTS.LOINC}?q=${encodeURIComponent(semanticQuery)}`))
       ]);
-      
+
       const snomed = await snomedResponse.json();
       const loinc = await loincResponse.json();
       const result = { snomed, loinc };
-      
+
       setSemanticResult(JSON.stringify(result, null, 2));
 
       // Call the completion callback
@@ -103,9 +103,11 @@ export const IntegrationSection = ({ onIntegrationComplete, initialQuery = "" }:
   return (
     <Card className="card-integration backdrop-blur-sm border-0 shadow-glow rounded-3xl overflow-hidden">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-xl">
-          <Globe className="h-5 w-5 text-primary" />
-          6) WHO ICD-11 &amp; SNOMED/LOINC Integration
+        <CardTitle className="flex items-center gap-3 text-2xl">
+          <div className="p-3 bg-gradient-primary rounded-2xl shadow-primary">
+            <Globe className="h-6 w-6 text-white" />
+          </div>
+          WHO ICD-11 &amp; SNOMED/LOINC Integration
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -146,12 +148,13 @@ export const IntegrationSection = ({ onIntegrationComplete, initialQuery = "" }:
               {whoResult || 'WHO ICD-11 search results will appear here...'}
             </pre>
           </div>
-          
+
           <div className="space-y-3">
+
             <h3 className="text-lg font-medium flex items-center gap-2">
               <div className="flex gap-1">
                 <div className="w-2 h-2 rounded-full bg-snomed"></div>
-                <div className="w-2 h-2 rounded-full bg-loinc"></div>
+                {/* <div className="w-2 h-2 rounded-full bg-loinc"></div> */}
               </div>
               SNOMED CT / LOINC Search
             </h3>

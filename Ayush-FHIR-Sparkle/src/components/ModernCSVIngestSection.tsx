@@ -102,7 +102,7 @@ export const ModernCSVIngestSection = ({ onIngestComplete }: ModernCSVIngestSect
             <Database className="h-6 w-6 text-white" />
           </div>
           <div>
-            <span className="text-gradient">Step 1:</span> Ingest NAMASTE CSV
+            <span className="text-gradient"></span> Ingest NAMASTE CSV
             {success && <CheckCircle2 className="inline-block ml-2 h-5 w-5 text-success" />}
           </div>
         </CardTitle>
@@ -113,8 +113,8 @@ export const ModernCSVIngestSection = ({ onIngestComplete }: ModernCSVIngestSect
             <div
               {...getRootProps()}
               className={`border-2 border-dashed rounded-2xl p-8 text-center cursor-pointer transition-all duration-300 ${isDragActive
-                  ? "border-success bg-success/10 scale-105"
-                  : "border-success/30 hover:border-success/60 hover:bg-success/5"
+                ? "border-success bg-success/10 scale-105"
+                : "border-success/30 hover:border-success/60 hover:bg-success/5"
                 } ${success ? "border-success bg-success/10" : ""}`}
             >
               <input {...getInputProps()} />

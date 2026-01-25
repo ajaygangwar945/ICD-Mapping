@@ -117,8 +117,10 @@ export const DashboardSection = () => {
   return (
     <Card className="card-dashboard backdrop-blur-sm border-0 shadow-glow rounded-3xl overflow-hidden">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-xl">
-          <BarChart3 className="h-5 w-5 text-primary" />
+        <CardTitle className="flex items-center gap-3 text-2xl">
+          <div className="p-3 bg-gradient-purple rounded-2xl shadow-purple">
+            <BarChart3 className="h-6 w-6 text-white" />
+          </div>
           Dashboard &amp; Analytics
         </CardTitle>
       </CardHeader>

@@ -1,12 +1,12 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
-import { 
-  Database, 
-  Search, 
-  ArrowRightLeft, 
-  Shield, 
-  History, 
-  Globe, 
-  FileText, 
+import {
+  Database,
+  Search,
+  ArrowRightLeft,
+  Shield,
+  History,
+  Globe,
+  FileText,
   BarChart3,
   Home
 } from "lucide-react";
@@ -33,9 +33,7 @@ export const Layout = () => {
           {/* Logo/Header */}
           <div className="p-6 border-b border-border/30">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <BarChart3 className="h-5 w-5 text-white" />
-              </div>
+              <img src="/favicon.png" alt="Logo" className="h-8 w-8" />
               <span className="text-xl font-bold text-foreground">Ayush Interop</span>
             </Link>
           </div>
@@ -65,7 +63,7 @@ export const Layout = () => {
           {/* Footer */}
           <div className="p-4 border-t border-border/30">
             <div className="text-xs text-muted-foreground text-center">
-              <p>&copy; 2025 Ayush Interop</p>
+              <p>&copy; 2026 Ayush Interop</p>
               <p>Healthcare Interoperability Platform</p>
             </div>
           </div>

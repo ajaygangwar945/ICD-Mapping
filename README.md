@@ -12,14 +12,28 @@
 [![FHIR](https://img.shields.io/badge/FHIR-R4-ff6b6b?style=for-the-badge&logo=hl7&logoColor=white)](https://www.hl7.org/fhir/)
 [![ICD-11](https://img.shields.io/badge/ICD--11-WHO-4dabf7?style=for-the-badge&logo=world-health-organization&logoColor=white)](https://icd.who.int/)
 
+![Healthcare Banner](https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80)
 
-
-<p align="center">
-  <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80" width="600"/>
-</p>
+**🚀 [Visit Live Application](https://icd-mapping.onrender.com) | 📚 [API Documentation](https://icd-mapping.onrender.com/docs) | 🎯 [Backend Repo](ayush-fhir/) | ⚡ [Frontend Repo](ayush-fhir-sparkle/)**
 
 </div>
 
+---
+
+## 📋 Table of Contents
+
+- [✨ Overview](#-overview)
+- [🎯 Problem Statement](#-problem-statement)
+- [🌟 Key Features](#-key-features)
+- [🏗️ Architecture](#️-architecture)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [🚀 Quick Start](#-quick-start)
+- [📦 Project Structure](#-project-structure)
+- [🌐 Deployment](#-deployment)
+- [📡 API Endpoints](#-api-endpoints)
+- [🎨 Screenshots](#-screenshots)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ---
 
@@ -51,6 +65,7 @@ Traditional Ayush healthcare systems in India face critical challenges in intero
 ### 💡 Our Solution
 
 ICD-Mapping implements **dual/double coding** that maps NAMASTE (National Ayush Morbidity And Standardized Terminologies Electronic) codes to:
+
 - 🌿 **WHO ICD-11 Traditional Medicine (TM2)** linearization
 - 💊 **WHO ICD-11 Biomedicine** codes
 - 🧬 **SNOMED CT** clinical findings
@@ -80,10 +95,10 @@ ICD-Mapping implements **dual/double coding** that maps NAMASTE (National Ayush 
 
 ### 📊 Analytics & Visualization
 
-- ✅ **Interactive Dashboard** - Real-time statistics and charts
-- ✅ **Dual Coding Coverage** - Track mapping completeness
-- ✅ **Top Terms Analysis** - Frequency visualization
-- ✅ **Usage Patterns** - System monitoring and insights
+- ✅ **Interactive Dashboard** - Real-time statistics and charts giving a snapshot of the system's health and usage.
+- ✅ **Dual Coding Coverage** -  A key metric showing the percentage of NAMASTE terms that have been successfully mapped to ICD-11, SNOMED CT, or LOINC. This percentage helps track the progress of interoperability efforts.
+- ✅ **Top Terms Analysis** - A dynamic bar chart visualizing the most frequently accessed or mapped NAMASTE terms, helping to identify high-priority conditions for resource allocation.
+- ✅ **Usage Patterns** - System monitoring and insights to understand how practitioners are interacting with the platform.
 
 ---
 
@@ -238,11 +253,11 @@ npm run dev
 
 | Service | URL | Description |
 |---------|-----|-------------|
-| 🏠 **Frontend UI** | http://localhost:5173 | Main application interface |
-| 🔌 **Backend API** | http://localhost:8000 | REST API server |
-| 📚 **API Docs** | http://localhost:8000/docs | Interactive Swagger documentation |
-| 🔍 **ReDoc** | http://localhost:8000/redoc | Alternative API documentation |
-| ❤️ **Health Check** | http://localhost:8000/health | Server health status |
+| 🏠 **Frontend UI** | <http://localhost:5173> | Main application interface |
+| 🔌 **Backend API** | <http://localhost:8000> | REST API server |
+| 📚 **API Docs** | <http://localhost:8000/docs> | Interactive Swagger documentation |
+| 🔍 **ReDoc** | <http://localhost:8000/redoc> | Alternative API documentation |
+| ❤️ **Health Check** | <http://localhost:8000/health> | Server health status |
 
 ---
 
@@ -293,13 +308,14 @@ ICD-Mapping/
 
 ### 🚀 Live Application
 
-![Deployment](https://img.shields.io/badge/Deployed_on-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
+**🌐 Production URL:** [https://icd-mapping.onrender.com](https://icd-mapping.onrender.com)
 
 ### ☁️ Deployment Platform: Render.com
 
 This application is deployed on **Render** with the following configuration:
 
 #### Backend Service
+
 - **Type:** Web Service
 - **Environment:** Python 3.11
 - **Region:** Oregon
@@ -307,6 +323,7 @@ This application is deployed on **Render** with the following configuration:
 - **Start Command:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
 
 #### Frontend Service
+
 - **Type:** Static Site
 - **Build Command:** `npm install && npm run build`
 - **Publish Directory:** `dist`
@@ -379,6 +396,21 @@ The `render.yaml` file contains the complete deployment configuration for both s
 
 ---
 
+## 🎨 Screenshots
+
+> **Note:** Visit the [live application](https://icd-mapping.onrender.com) to see the platform in action!
+
+### Key Features
+
+- 📊 **Interactive Dashboard** with real-time analytics
+- 🔍 **Smart Search** with auto-complete and fuzzy matching
+- 🔄 **Dual Coding Interface** for NAMASTE ↔ ICD-11 translation
+- 📤 **CSV Upload** with drag-and-drop functionality
+- 🏥 **FHIR Problem List** creation with multiple coding systems
+- 📈 **Analytics Charts** showing usage patterns and coverage
+
+---
+
 ## 🤝 Contributing
 
 We welcome contributions! Here's how you can help:
@@ -404,10 +436,19 @@ We welcome contributions! Here's how you can help:
 ### 🐛 Bug Reports
 
 Found a bug? Please open an issue with:
+
 - Clear description of the problem
 - Steps to reproduce
 - Expected vs actual behavior
 - Screenshots if applicable
+
+---
+
+## 📄 License
+
+This project is developed for the **Ministry of Ayush** hackathon and demonstrates interoperability between traditional Indian medicine and global healthcare standards.
+
+**Category:** Software | **Theme:** MedTech / BioTech / HealthTech
 
 ---
 
@@ -437,12 +478,14 @@ Found a bug? Please open an issue with:
 
 ### 🌟 Built with ❤️ for Better Healthcare Interoperability
 
+**🚀 [Visit Live Application](https://icd-mapping.onrender.com)**
 
-<div align="center">
-  
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/ajaygangwar945/ICD-Mapping)
-[![Live](https://img.shields.io/badge/🌐_Live_App-Visit-success?style=for-the-badge)](https://icd-mapping.onrender.com)
-[![Docs](https://img.shields.io/badge/📚_API_Documentation-Swagger-009688?style=for-the-badge)](https://icd-mapping.onrender.com/docs)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/your-repo)
+[![Documentation](https://img.shields.io/badge/📚_API-Documentation-009688?style=for-the-badge)](https://icd-mapping.onrender.com/docs)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+
+---
+
+**[⬆ Back to Top](#-icd-mapping-ayush-healthcare-interoperability-platform)**
 
 </div>
-

@@ -35,7 +35,7 @@ export const ModernSearchSection = ({ onSearchComplete, initialQuery = "" }: Mod
 
   const handleSearch = async () => {
     if (!query.trim()) return;
-    
+
     setIsSearching(true);
     try {
       // Search API call
@@ -148,7 +148,7 @@ export const ModernSearchSection = ({ onSearchComplete, initialQuery = "" }: Mod
             <Search className="h-6 w-6 text-white" />
           </div>
           <div>
-            <span className="text-gradient">Step 2:</span> AI-Powered Search
+            <span className="text-gradient"></span> AI-Powered Search
           </div>
         </CardTitle>
       </CardHeader>
@@ -199,8 +199,8 @@ export const ModernSearchSection = ({ onSearchComplete, initialQuery = "" }: Mod
               </div>
             )}
           </div>
-          <Button 
-            onClick={handleSearch} 
+          <Button
+            onClick={handleSearch}
             disabled={isSearching}
             className="btn-secondary px-8 py-4"
           >
@@ -222,8 +222,8 @@ export const ModernSearchSection = ({ onSearchComplete, initialQuery = "" }: Mod
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-              <Search className="h-5 w-5 text-secondary" />
-              <span className="text-base font-semibold">Search Results</span>
+                <Search className="h-5 w-5 text-secondary" />
+                <span className="text-base font-semibold">Search Results</span>
               </div>
               <div className="flex items-center gap-2">
                 <Button variant="outline" size="sm" onClick={() => copyToClipboard(searchResult)} disabled={!searchResult}>
@@ -240,12 +240,12 @@ export const ModernSearchSection = ({ onSearchComplete, initialQuery = "" }: Mod
               </pre>
             </div>
           </div>
-          
+
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-              <Brain className="h-5 w-5 text-primary" />
-              <span className="text-base font-semibold">AI Suggestions</span>
+                <Brain className="h-5 w-5 text-primary" />
+                <span className="text-base font-semibold">AI Suggestions</span>
               </div>
               <div className="flex items-center gap-2">
                 <Button variant="outline" size="sm" onClick={() => copyToClipboard(suggestResult)} disabled={!suggestResult}>

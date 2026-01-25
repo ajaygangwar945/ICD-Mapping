@@ -34,7 +34,7 @@ export const AuthBundleSection = ({ onAuditUpdate }: AuthBundleSectionProps) => 
         method: 'POST'
       });
       const data = await response.json();
-      
+
       if (data.access_token) {
         localStorage.setItem('token', data.access_token);
         toast({
@@ -42,7 +42,7 @@ export const AuthBundleSection = ({ onAuditUpdate }: AuthBundleSectionProps) => 
           description: "Access token has been stored"
         });
       }
-      
+
       setAuthResult(JSON.stringify(data, null, 2));
     } catch (error) {
       console.error('Auth error:', error);
@@ -74,38 +74,38 @@ export const AuthBundleSection = ({ onAuditUpdate }: AuthBundleSectionProps) => 
         resourceType: 'Bundle',
         type: 'transaction',
         entry: [
-          { 
-            resource: { 
-              resourceType: 'Patient', 
-              id: 'p1', 
-              name: [{ text: 'Test Patient' }] 
-            } 
+          {
+            resource: {
+              resourceType: 'Patient',
+              id: 'p1',
+              name: [{ text: 'Test Patient' }]
+            }
           },
-          { 
-            resource: { 
-              resourceType: 'Practitioner', 
-              id: 'pr1', 
-              name: [{ text: 'Dr. Demo' }] 
-            } 
+          {
+            resource: {
+              resourceType: 'Practitioner',
+              id: 'pr1',
+              name: [{ text: 'Dr. Demo' }]
+            }
           },
-          { 
-            resource: { 
-              resourceType: 'Encounter', 
-              id: 'e1', 
-              status: 'finished' 
-            } 
+          {
+            resource: {
+              resourceType: 'Encounter',
+              id: 'e1',
+              status: 'finished'
+            }
           },
-          { 
-            resource: { 
-              resourceType: 'Condition', 
-              id: 'c1', 
-              code: { 
+          {
+            resource: {
+              resourceType: 'Condition',
+              id: 'c1',
+              code: {
                 coding: [
                   { system: 'http://example.com/CodeSystem/namaste', code: 'AY001' },
                   { system: 'http://id.who.int/icd11', code: 'TM2-AY134' }
-                ] 
-              } 
-            } 
+                ]
+              }
+            }
           }
         ]
       };
@@ -122,7 +122,7 @@ export const AuthBundleSection = ({ onAuditUpdate }: AuthBundleSectionProps) => 
       const data = await response.json();
       setBundleResult(JSON.stringify(data, null, 2));
       onAuditUpdate();
-      
+
       toast({
         title: "Bundle sent successfully",
         description: "FHIR bundle has been processed"
@@ -143,9 +143,11 @@ export const AuthBundleSection = ({ onAuditUpdate }: AuthBundleSectionProps) => 
   return (
     <Card className="card-auth backdrop-blur-sm border-0 shadow-warning rounded-3xl overflow-hidden">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-xl">
-          <Shield className="h-5 w-5 text-primary" />
-          4) Mock ABHA OAuth &amp; Bundle Ingest
+        <CardTitle className="flex items-center gap-3 text-2xl">
+          <div className="p-3 bg-gradient-warning rounded-2xl shadow-warning">
+            <Shield className="h-6 w-6 text-white" />
+          </div>
+          Mock ABHA OAuth &amp; Bundle Ingest
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
