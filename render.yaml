@@ -1,23 +1,29 @@
 services:
-  # Backend – FastAPI service
+  # Backend API
   - type: web
-    name: ayush-fhir-backend
-    env: python
-    region: oregon
-    rootDir: ayush-fhir
+    name: icd-mapping-backend
+    runtime: python
+    region: singapore
+    rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
         value: "3.11.9"
+      - key: CORSMiddleware
+        value: "*"
 
-  # Frontend – Vite static site
-  - type: static
-    name: ayush-fhir-frontend
-    region: oregon
-    rootDir: ayush-fhir-sparkle
+  # Frontend UI
+  - type: web # Using web for static to avoid publishPath issues if static is problematic in this schema
+    name: icd-mapping-frontend
+    runtime: node
+    region: singapore
+    rootDir: frontend
     buildCommand: npm install && npm run build
-    publishPath: dist
+    startCommand: npm run preview # Or a proper static server if needed, but 'npm run build' generates 'dist'
     envVars:
       - key: VITE_API_URL
-        value: ""
+        fromService:
+          type: web
+          name: icd-mapping-backend
+          property: url

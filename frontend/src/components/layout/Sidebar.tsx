@@ -1,0 +1,78 @@
+import { FileText, LayoutDashboard, Search, Repeat2, Upload, Shield, Globe, Sun, Moon } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { cn } from "@/lib/utils";
+import { useTheme } from "@/components/theme-provider";
+
+interface SidebarItem {
+    icon: LucideIcon;
+    label: string;
+    href: string;
+}
+
+const sidebarItems: SidebarItem[] = [
+    { icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
+    { icon: Upload, label: "Data Ingestion", href: "/ingestion" },
+    { icon: Search, label: "Search", href: "/search" },
+    { icon: Repeat2, label: "Translation", href: "/translation" },
+    { icon: Shield, label: "Auth & Audit", href: "/settings" },
+    { icon: Globe, label: "Integrations", href: "/fhir" },
+    { icon: FileText, label: "Problem List", href: "/fhir" },
+];
+
+export const Sidebar = () => {
+    const location = useLocation();
+    const { theme, setTheme } = useTheme();
+
+    return (
+        <div className="w-60 h-screen bg-card text-card-foreground border-r border-border flex flex-col">
+            {/* Header */}
+            <div className="h-16 flex items-center px-4 border-b border-border justify-between">
+                <Link to="/" className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+                        <svg className="w-5 h-5 text-primary-foreground" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6z" />
+                        </svg>
+                    </div>
+                    <span className="font-bold text-foreground">Ayush Interop</span>
+                </Link>
+
+                <button
+                    onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                    className="p-2 rounded-lg hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
+                    title="Toggle theme"
+                >
+                    {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+                </button>
+            </div>
+
+            {/* Navigation */}
+            <nav className="flex-1 py-4 px-2 space-y-1 overflow-y-auto">
+                {sidebarItems.map((item) => {
+                    const isActive = location.pathname === item.href;
+                    return (
+                        <Link to={item.href} key={item.href}>
+                            <div
+                                className={cn(
+                                    "flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all",
+                                    isActive
+                                        ? "bg-primary/10 text-primary"
+                                        : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                                )}
+                            >
+                                <item.icon className="w-5 h-5 shrink-0" />
+                                <span className="text-sm font-medium">{item.label}</span>
+                            </div>
+                        </Link>
+                    );
+                })}
+            </nav>
+
+            {/* Footer */}
+            <div className="p-4 border-t border-border text-xs text-muted-foreground text-center">
+                <p>© 2025 Ayush Interop</p>
+                <p className="mt-1">Healthcare Interoperability Platform</p>
+            </div>
+        </div>
+    );
+};
