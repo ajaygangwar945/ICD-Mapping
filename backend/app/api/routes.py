@@ -1,6 +1,7 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, UploadFile, File
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
+from app.services.mapping_service import mapping_service
 
 router = APIRouter(prefix="/api", tags=["mapping"])
 
@@ -9,44 +10,58 @@ class SearchRequest(BaseModel):
     limit: int = 10
 
 class MappingResult(BaseModel):
-    id: int
+    id: str
     term: str
     code: str
     match: str
     confidence: float
+
+class TranslationResult(BaseModel):
+    source_code: str
+    source_term: str
+    target_code: str
+    system: str
+    status: str
 
 @router.post("/search", response_model=List[MappingResult])
 async def search_mappings(request: SearchRequest):
     """
     Search for ICD-11 mappings for given Ayush term
     """
-    # Mock data - replace with actual mapping logic
-    mock_results = [
-        {
-            "id": 1,
-            "term": request.query,
-            "code": "NAM:123",
-            "match": "MG26 (Fever of unknown origin)",
-            "confidence": 0.92
-        },
-        {
-            "id": 2,
-            "term": request.query,
-            "code": "NAM:456",
-            "match": "MD30 (Cough)",
-            "confidence": 0.88
-        }
-    ]
-    return mock_results[:request.limit]
+    results = mapping_service.search(request.query, request.limit)
+    return results
+
+@router.get("/translate/{code}", response_model=TranslationResult)
+async def translate_code(code: str):
+    """
+    Translate a specific NAMASTE code to ICD-11
+    """
+    result = mapping_service.translate(code)
+    if not result:
+        raise HTTPException(status_code=404, detail="Code not found")
+    return result
 
 @router.get("/stats")
 async def get_stats():
     """
     Get system statistics
     """
-    return {
-        "total_mappings": 12450,
-        "daily_queries": 856,
-        "active_users": 24,
-        "fhir_resources": 1203
-    }
+    return mapping_service.get_stats()
+
+@router.post("/ingest-demo")
+async def ingest_demo():
+    """
+    Reload demo data from files
+    """
+    try:
+        mapping_service._load_data()
+        return {"status": "success", "message": "Demo data reloaded"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.post("/upload")
+async def upload_file(file: UploadFile = File(...)):
+    """
+    Handle file uploads (placeholder)
+    """
+    return {"filename": file.filename, "status": "Uploaded (Processing simulated)"}

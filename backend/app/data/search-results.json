@@ -1,0 +1,127 @@
+{
+  "exact": [],
+  "partial": [
+    {
+      "code": "AY001",
+      "label": "Arsha",
+      "synonyms": [
+        "Hemorrhoids",
+        "Piles",
+        "अर्श",
+        "Arsha variant"
+      ],
+      "icd11_tm2_codes": [
+        "ICD-11:ME82"
+      ]
+    },
+    {
+      "code": "AY002",
+      "label": "Anaha",
+      "synonyms": [
+        "Constipation",
+        "Bloating",
+        "आनाह"
+      ],
+      "icd11_tm2_codes": [
+        "ICD-11:DA74"
+      ]
+    },
+    {
+      "code": "AY003",
+      "label": "Vata Vyadhi",
+      "synonyms": [
+        "Neuromuscular disorder",
+        "Vata imbalance",
+        "वात व्याधि"
+      ],
+      "icd11_tm2_codes": [
+        "ICD-11:TM2-AY999"
+      ]
+    },
+    {
+      "code": "AY004",
+      "label": "Raktapitta",
+      "synonyms": [
+        "Hematemesis",
+        "Nasal bleeding",
+        "रक्तपित्त"
+      ],
+      "icd11_tm2_codes": [
+        "ICD-11:ND5A"
+      ]
+    },
+    {
+      "code": "AY005",
+      "label": "Prameha",
+      "synonyms": [
+        "Diabetes",
+        "Prameha Roga",
+        "प्रमेह"
+      ],
+      "icd11_tm2_codes": [
+        "ICD-11:5A11"
+      ]
+    },
+    {
+      "code": "AY006",
+      "label": "Jwara",
+      "synonyms": [
+        "Fever",
+        "ज्वर",
+        "Jwara variant"
+      ],
+      "icd11_tm2_codes": [
+        "ICD-11:1D40"
+      ]
+    },
+    {
+      "code": "AY007",
+      "label": "Shwasa",
+      "synonyms": [
+        "Asthma",
+        "Breathlessness",
+        "श्वास"
+      ],
+      "icd11_tm2_codes": [
+        "ICD-11:CA23"
+      ]
+    },
+    {
+      "code": "AY008",
+      "label": "Atisara",
+      "synonyms": [
+        "Diarrhea",
+        "अतिसार"
+      ],
+      "icd11_tm2_codes": [
+        "ICD-11:1A00"
+      ]
+    },
+    {
+      "code": "AY009",
+      "label": "Amlapitta",
+      "synonyms": [
+        "Dyspepsia",
+        "Sour indigestion",
+        "अम्लपित्त",
+        "Amlapitta variant"
+      ],
+      "icd11_tm2_codes": [
+        "ICD-11:TM2-AY134",
+        "ICD-11:K29.7"
+      ]
+    },
+    {
+      "code": "AY010",
+      "label": "Kasa",
+      "synonyms": [
+        "Cough",
+        "कास",
+        "Kasa variant"
+      ],
+      "icd11_tm2_codes": [
+        "ICD-11:CA20"
+      ]
+    }
+  ]
+}

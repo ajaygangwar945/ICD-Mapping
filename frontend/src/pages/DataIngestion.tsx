@@ -19,11 +19,23 @@ export const DataIngestion = () => {
     setIsDragging(false);
   };
 
+  const handleIngestDemo = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/api/ingest-demo", { method: "POST" });
+      const data = await response.json();
+      if (data.status === "success") {
+        alert("Demo data loaded successfully!");
+      }
+    } catch (error) {
+      console.error("Demo ingestion failed:", error);
+    }
+  };
+
   return (
     <div className="space-y-8 max-w-5xl mx-auto">
       <header className="flex flex-col gap-2">
-        <h1 className="text-4xl font-bold tracking-tight">Data Ingestion</h1>
-        <p className="text-muted-foreground text-lg">Upload and process healthcareTerminology data in NAMASTE compliant format</p>
+        <h1 className="text-4xl font-bold tracking-tight text-foreground">Data Ingestion</h1>
+        <p className="text-muted-foreground text-lg">Upload and process healthcare terminology data in NAMASTE compliant format</p>
       </header>
 
       <motion.div
@@ -50,7 +62,10 @@ export const DataIngestion = () => {
               <Upload className="w-5 h-5" />
               Upload file
             </button>
-            <button className="flex-1 md:flex-none px-8 py-4 border border-border bg-muted/30 text-foreground rounded-xl font-bold hover:bg-muted transition-all flex items-center justify-center gap-2">
+            <button
+              onClick={handleIngestDemo}
+              className="flex-1 md:flex-none px-8 py-4 border border-border bg-muted/30 text-foreground rounded-xl font-bold hover:bg-muted transition-all flex items-center justify-center gap-2"
+            >
               <CheckCircle2 className="w-5 h-5 text-primary" />
               Demo data
             </button>

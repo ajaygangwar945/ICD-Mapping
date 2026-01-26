@@ -1,14 +1,36 @@
 import { motion } from "framer-motion";
 import { Activity, Database, FileText, Search, Users, ArrowUpRight, Sparkles, TrendingUp } from "lucide-react";
-
-const stats = [
-    { label: "Total Mappings", value: "12,450", icon: Database, color: "text-blue-500", bg: "bg-blue-500/10", trend: "+12%" },
-    { label: "Daily Queries", value: "856", icon: Search, color: "text-violet-500", bg: "bg-violet-500/10", trend: "+5%" },
-    { label: "Active Users", value: "24", icon: Users, color: "text-emerald-500", bg: "bg-emerald-500/10", trend: "+2%" },
-    { label: "FHIR Resources", value: "1,203", icon: FileText, color: "text-amber-500", bg: "bg-amber-500/10", trend: "+8%" },
-];
+import { useState, useEffect } from "react";
 
 export const Dashboard = () => {
+    const [statsData, setStatsData] = useState({
+        total_mappings: "0",
+        daily_queries: "0",
+        active_users: "0",
+        fhir_resources: "0"
+    });
+
+    useEffect(() => {
+        fetch("http://localhost:8000/api/stats")
+            .then(res => res.json())
+            .then(data => {
+                setStatsData({
+                    total_mappings: data.total_mappings.toLocaleString(),
+                    daily_queries: data.daily_queries.toLocaleString(),
+                    active_users: data.active_users.toLocaleString(),
+                    fhir_resources: data.fhir_resources.toLocaleString()
+                });
+            })
+            .catch(err => console.error("Failed to fetch stats:", err));
+    }, []);
+
+    const stats = [
+        { label: "Total Mappings", value: statsData.total_mappings, icon: Database, color: "text-blue-500", bg: "bg-blue-500/10", trend: "+12%" },
+        { label: "Daily Queries", value: statsData.daily_queries, icon: Activity, color: "text-emerald-500", bg: "bg-emerald-500/10", trend: "+5%" },
+        { label: "Active Users", value: statsData.active_users, icon: Users, color: "text-violet-500", bg: "bg-violet-500/10", trend: "+2" },
+        { label: "FHIR Resources", value: statsData.fhir_resources, icon: FileText, color: "text-amber-500", bg: "bg-amber-500/10", trend: "+18%" },
+    ];
+
     return (
         <div className="space-y-10 max-w-7xl mx-auto">
             {/* Welcome Section */}

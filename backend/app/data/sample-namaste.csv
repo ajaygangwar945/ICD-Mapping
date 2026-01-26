@@ -1,0 +1,4 @@
+id,term,category,synonyms,icd11_tm2_code,references,description
+AY001,"Amlapitta","Ayurvedic Disease","Dyspepsia,Sour indigestion","TM2-AY134","Charaka Samhita","Acid dyspepsia characterized by sour belching and heartburn"
+AY002,"Vata Dosha Imbalance","Ayurvedic Constitutional Disorder","Wind disorder,Nervous system imbalance","","Sushruta Samhita","Imbalance of Vata dosha affecting movement and nervous functions"
+UN001,"Mizaj-e-Har","Unani Temperament","Hot temperament,Warm constitution","TM2-UN045","Canon of Medicine","Hot temperament in Unani medicine system"
