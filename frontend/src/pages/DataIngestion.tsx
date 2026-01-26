@@ -21,7 +21,9 @@ export const DataIngestion = () => {
 
   const handleIngestDemo = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/ingest-demo", { method: "POST" });
+      const response = await fetch("/api/search", {
+        method: "POST"
+      });
       const data = await response.json();
       if (data.status === "success") {
         alert("Demo data loaded successfully!");

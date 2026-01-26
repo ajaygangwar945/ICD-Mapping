@@ -11,7 +11,7 @@ export const Dashboard = () => {
     });
 
     useEffect(() => {
-        fetch("http://localhost:8000/api/stats")
+        fetch("/api/stats")
             .then(res => res.json())
             .then(data => {
                 setStatsData({

@@ -20,7 +20,7 @@ export const Translation = () => {
         setLoading(true);
         setResult(null);
         try {
-            const response = await fetch(`http://localhost:8000/api/translate/${code}`);
+            const response = await fetch(`/api/translate/${code}`);
             if (response.ok) {
                 const data = await response.json();
                 setResult(data);
