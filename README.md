@@ -20,23 +20,6 @@
 
 ---
 
-## 📋 Table of Contents
-
-- [✨ Overview](#-overview)
-- [🎯 Problem Statement](#-problem-statement)
-- [🌟 Key Features](#-key-features)
-- [🏗️ Architecture](#️-architecture)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [🚀 Quick Start](#-quick-start)
-- [📦 Project Structure](#-project-structure)
-- [🌐 Deployment](#-deployment)
-- [📡 API Endpoints](#-api-endpoints)
-- [🎨 Screenshots](#-screenshots)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-
----
-
 ## ✨ Overview
 
 **ICD-Mapping** is a comprehensive healthcare interoperability platform that enables seamless integration between India's traditional **Ayush systems** (Ayurveda, Yoga, Unani, Siddha, Homeopathy) and modern global healthcare standards through **FHIR R4** compliance and **ICD-11** dual coding.
