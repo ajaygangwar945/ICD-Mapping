@@ -5,6 +5,18 @@ echo "Build script started..."
 echo "Current directory: $(pwd)"
 ls -la
 
+# Build Frontend
+echo "Building Frontend..."
+cd frontend
+npm install
+npm run build
+cd ..
+
+# Prepare Static Files for Backend
+echo "Moving frontend build to backend/static..."
+mkdir -p static
+cp -r frontend/dist/* static/
+
 # Try to find requirements.txt in potential locations
 if [ -f "requirements.txt" ]; then
     echo "Found requirements.txt at root."
