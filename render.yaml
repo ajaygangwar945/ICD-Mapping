@@ -5,7 +5,7 @@ services:
     runtime: python
     region: singapore
     rootDir: backend
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r requirements.txt || pip install -r ../requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
@@ -14,13 +14,12 @@ services:
         value: "*"
 
   # Frontend UI
-  - type: web # Using web for static to avoid publishPath issues if static is problematic in this schema
+  - type: static
     name: icd-mapping-frontend
-    runtime: node
     region: singapore
     rootDir: frontend
     buildCommand: npm install && npm run build
-    startCommand: npm run preview # Or a proper static server if needed, but 'npm run build' generates 'dist'
+    publishPath: dist
     envVars:
       - key: VITE_API_URL
         fromService:
