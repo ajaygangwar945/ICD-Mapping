@@ -4,14 +4,7 @@ services:
     name: icd-mapping-backend
     runtime: python
     region: singapore
-    buildCommand: |
-      if [ -f pyproject.toml ]; then
-        poetry install
-      elif [ -f backend/requirements.txt ]; then
-        pip install -r backend/requirements.txt
-      else
-        pip install -r requirements.txt
-      fi
+    buildCommand: ./build.sh
     startCommand: uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
