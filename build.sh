@@ -23,7 +23,7 @@ if [ -f "pyproject.toml" ]; then
     echo "Found pyproject.toml, installing via poetry..."
     pip install poetry
     poetry config virtualenvs.create false
-    poetry install --no-dev
+    poetry install
 fi
 
 echo "Build completed successfully."
