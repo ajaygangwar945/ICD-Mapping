@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 import os
 from app.api.routes import router as api_router
 
@@ -30,6 +31,21 @@ async def health_check():
     return {"status": "ok", "version": "2.0.0"}
 
 # Serve Frontend Static Files (Production)
-# We will copy the frontend dist folder to backend/static during build
-if os.path.exists("static"):
-    app.mount("/", StaticFiles(directory="static", html=True), name="static")
+@app.get("/{full_path:path}")
+async def serve_spa(full_path: str):
+    # API requests should be handled by the router, but if they reach here, return 404
+    if full_path.startswith("api/"):
+        return {"detail": "Not Found"}
+        
+    # Check if the requested path corresponds to a static file (e.g., assets/main.js)
+    static_file = os.path.join("static", full_path)
+    if os.path.isfile(static_file):
+        return FileResponse(static_file)
+    
+    # For any other route (like /ingestion, /fhir), serve index.html to let React Router handle it
+    index_path = os.path.join("static", "index.html")
+    if os.path.exists(index_path):
+        return FileResponse(index_path)
+    
+    # Fallback if index.html is missing
+    return {"detail": "Not Found"}
