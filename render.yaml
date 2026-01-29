@@ -1,7 +1,7 @@
 services:
-  # Backend API
+  # Ayush Intelligence Unified Platform
   - type: web
-    name: icd-mapping-backend
+    name: icd-mapping-platform
     runtime: python
     region: singapore
     buildCommand: ./build.sh
@@ -13,18 +13,3 @@ services:
         value: "backend"
       - key: CORSMiddleware
         value: "*"
-
-  # Frontend UI
-  - type: web
-    name: icd-mapping-frontend
-    runtime: node
-    region: singapore
-    rootDir: frontend
-    buildCommand: npm install && npm run build
-    startCommand: npm run preview
-    envVars:
-      - key: VITE_API_URL
-        fromService:
-          type: web
-          name: icd-mapping-backend
-          property: url

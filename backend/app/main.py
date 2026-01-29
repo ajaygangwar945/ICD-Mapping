@@ -5,7 +5,7 @@ from fastapi.responses import FileResponse
 import os
 from app.api.routes import router as api_router
 
-app = FastAPI(title="Ayush Interop API", version="2.0.0")
+app = FastAPI(title="Ayush Intelligence API", version="2.0.0")
 
 # CORS
 origins = [

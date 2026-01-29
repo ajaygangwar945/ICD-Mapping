@@ -3,8 +3,9 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Light Mode - Clean, Clinical, Premium */
+    --background: 210 40% 98%; /* Soft blue-grey white */
+    --foreground: 222.2 84% 4.9%; /* Deep dark blue-black for high contrast */
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -12,56 +13,61 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 266 95% 63%;
+    /* Primary Teal - Fresh, Medical, Tech */
+    --primary: 178 100% 35%; /* #00b3b3 - Darker/Rich Teal for readability on light */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 40% 90%;
+    --muted-foreground: 215.4 16.3% 40%;
 
-    --accent: 266 95% 63%;
+    /* Accent Royal Blue - Trust, Intelligence */
+    --accent: 225 73% 57%; /* #4169E1 */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 266 95% 63%;
+    --border: 214.3 31.8% 85%;
+    --input: 214.3 31.8% 85%;
+    --ring: 178 100% 35%; /* Matches Primary */
 
-    --radius: 0.5rem;
+    --radius: 0.75rem; /* Slightly more rounded for modern feel */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark Mode - Deep, Glowing, Cyberpunk-Medical */
+    --background: 222 47% 11%; /* #0f172a - Rich dark blue background */
+    --foreground: 210 40% 98%; /* Bright white text */
 
-    --card: 222.2 84% 4.9%;
+    --card: 217 33% 17%; /* Contrast card background */
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 217 33% 17%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 266 95% 70%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary Teal - Glowing/Neon for Dark Mode */
+    --primary: 178 100% 50%; /* #00FFFF - Bright Teal */
+    --primary-foreground: 222 47% 11%; /* Dark text on bright button */
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted-foreground: 215 20.2% 75%; /* Lighter muted text for visibility */
 
-    --accent: 266 95% 70%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent Royal Blue */
+    --accent: 225 73% 65%; /* Lighter Royal Blue for dark mode */
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 217.2 32.6% 25%;
+    --input: 217.2 32.6% 25%;
+    --ring: 178 100% 50%;
   }
 }
 

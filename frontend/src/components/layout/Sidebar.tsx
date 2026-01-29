@@ -29,12 +29,8 @@ export const Sidebar = () => {
             {/* Header */}
             <div className="h-16 flex items-center px-4 border-b border-border justify-between">
                 <Link to="/" className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
-                        <svg className="w-5 h-5 text-primary-foreground" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6z" />
-                        </svg>
-                    </div>
-                    <span className="font-bold text-foreground">Ayush Interop</span>
+                    <img src="/favicon.svg" alt="Ayush Intelligence Logo" className="w-8 h-8 rounded-lg shadow-lg shadow-primary/20" />
+                    <span className="font-bold text-foreground">Ayush Intelligence</span>
                 </Link>
 
                 <button
@@ -70,7 +66,7 @@ export const Sidebar = () => {
 
             {/* Footer */}
             <div className="p-4 border-t border-border text-xs text-muted-foreground text-center">
-                <p>© 2025 Ayush Interop</p>
+                <p>© 2025 Ayush Intelligence</p>
                 <p className="mt-1">Healthcare Interoperability Platform</p>
             </div>
         </div>
