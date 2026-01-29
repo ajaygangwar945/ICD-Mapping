@@ -2,12 +2,18 @@ import pandas as pd
 import json
 import os
 from typing import List, Dict, Any
+from pathlib import Path
 
 class MappingService:
-    def __init__(self, data_dir: str = "app/data"):
-        self.data_dir = data_dir
-        self.csv_path = os.path.join(data_dir, "sample-namaste.csv")
-        self.json_path = os.path.join(data_dir, "search-results.json")
+    def __init__(self, data_dir: str = None):
+        if data_dir is None:
+            # Resolve path relative to this file: backend/app/services/../data -> backend/app/data
+            self.data_dir = str(Path(__file__).parent.parent / "data")
+        else:
+            self.data_dir = data_dir
+            
+        self.csv_path = os.path.join(self.data_dir, "sample-namaste.csv")
+        self.json_path = os.path.join(self.data_dir, "search-results.json")
         self._load_data()
 
     def _load_data(self):
