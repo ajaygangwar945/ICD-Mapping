@@ -1,10 +1,34 @@
-import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import { Sidebar } from "./Sidebar";
 import { Menu } from "lucide-react";
 
 export const Layout = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const { pathname } = useLocation();
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        // Disable browser's automatic scroll restoration to ensure our control
+        if ('scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual';
+        }
+
+        const resetScroll = () => {
+            if (scrollContainerRef.current) {
+                scrollContainerRef.current.scrollTop = 0;
+            }
+            window.scrollTo(0, 0);
+        };
+
+        // Try immediately
+        resetScroll();
+
+        // Staggered retries to handle delayed hydration or layout shifts
+        const timeouts = [10, 50, 100].map(delay => setTimeout(resetScroll, delay));
+
+        return () => timeouts.forEach(t => clearTimeout(t));
+    }, [pathname]);
 
     return (
         <div className="flex h-screen bg-background overflow-hidden font-sans text-foreground">
@@ -50,7 +74,11 @@ export const Layout = () => {
                 </header>
 
                 {/* Content Area */}
-                <div className="flex-1 overflow-y-auto relative">
+                <div
+                    ref={scrollContainerRef}
+                    id="scroll-container"
+                    className="flex-1 overflow-y-auto relative"
+                >
                     {/* Ambient Background Gradient */}
                     <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-primary/5 via-transparent to-accent/5 z-0" />
 

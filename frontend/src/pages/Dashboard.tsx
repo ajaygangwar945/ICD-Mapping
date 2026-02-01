@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Activity, Database, FileText, Search, Users, ArrowUpRight, Sparkles, TrendingUp } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 
 export const Dashboard = () => {
     const [statsData, setStatsData] = useState({
@@ -139,9 +141,11 @@ export const Dashboard = () => {
                     <p className="text-primary-foreground/80 md:text-lg mb-8 md:mb-10 leading-relaxed italic">
                         Instantly map local traditional terminology to international standards with 99% accuracy.
                     </p>
-                    <button className="w-full bg-white text-primary font-bold py-3 md:py-4 rounded-2xl hover:bg-primary-foreground transition-all shadow-xl hover:-translate-y-1 active:translate-y-0 text-sm md:text-base">
-                        New Search Session
-                    </button>
+                    <Link to="/search" className="w-full">
+                        <button className="w-full bg-white text-primary font-bold py-3 md:py-4 rounded-2xl hover:bg-primary-foreground transition-all shadow-xl hover:-translate-y-1 active:translate-y-0 text-sm md:text-base">
+                            New Search Session
+                        </button>
+                    </Link>
                     <p className="mt-6 text-xs font-medium text-white/40 uppercase tracking-[0.2em]">Next-Gen Interop Engine</p>
                 </div>
             </motion.div>
