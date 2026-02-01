@@ -125,7 +125,9 @@ npm run dev
 
 This platform represents a significant step forward in digitizing traditional medicine systems with international interoperability standards. It is currently in active development and maintenance.
 
-© 2025 Ayush Intelligence. All Rights Reserved.
+© 2026 Ayush Intelligence. All Rights Reserved.
+
+---
 
 <div align="center">
 
