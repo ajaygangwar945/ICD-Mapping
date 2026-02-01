@@ -9,8 +9,8 @@ export const Settings = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="flex flex-col gap-2"
             >
-                <h1 className="text-4xl font-bold tracking-tight">System Configuration</h1>
-                <p className="text-muted-foreground text-lg italic">
+                <h1 className="text-3xl md:text-4xl font-bold tracking-tight">System Configuration</h1>
+                <p className="text-muted-foreground text-sm md:text-lg italic">
                     Fine-tune your interoperability engine and application preferences
                 </p>
             </motion.div>
@@ -56,7 +56,7 @@ export const Settings = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: idx * 0.1 }}
-                        className="bg-card border border-border rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all"
+                        className="bg-card border border-border rounded-2xl md:rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all"
                     >
                         <div className="flex items-center gap-4 p-6 border-b border-border bg-muted/20">
                             <div className="p-2.5 bg-primary/10 rounded-xl">
@@ -66,17 +66,17 @@ export const Settings = () => {
                         </div>
                         <div className="divide-y divide-border">
                             {group.settings.map((setting) => (
-                                <div key={setting.label} className="flex items-center justify-between p-6 hover:bg-muted/10 transition-colors group cursor-pointer">
+                                <div key={setting.label} className="flex flex-col sm:flex-row sm:items-center justify-between p-5 md:p-6 hover:bg-muted/10 transition-colors group cursor-pointer gap-4">
                                     <div className="flex gap-4">
-                                        <div className="mt-1">
+                                        <div className="mt-1 shrink-0">
                                             <setting.icon className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                                         </div>
                                         <div>
-                                            <div className="font-bold text-foreground group-hover:translate-x-1 transition-transform">{setting.label}</div>
-                                            <div className="text-sm text-muted-foreground italic">{setting.description}</div>
+                                            <div className="font-bold text-sm md:text-base text-foreground group-hover:translate-x-1 transition-transform">{setting.label}</div>
+                                            <div className="text-xs md:text-sm text-muted-foreground italic">{setting.description}</div>
                                         </div>
                                     </div>
-                                    <div className="text-xs px-4 py-2 bg-muted text-foreground border border-border rounded-xl font-bold uppercase tracking-widest hover:border-primary transition-colors">
+                                    <div className="text-[10px] md:text-xs px-3 py-1.5 md:px-4 md:py-2 bg-muted text-foreground border border-border rounded-lg md:rounded-xl font-bold uppercase tracking-widest hover:border-primary transition-colors text-center self-start sm:self-auto">
                                         {setting.control}
                                     </div>
                                 </div>
@@ -86,9 +86,9 @@ export const Settings = () => {
                 ))}
             </div>
 
-            <div className="pt-10 border-t border-border flex justify-between items-center text-sm">
+            <div className="pt-10 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
                 <p className="text-muted-foreground italic">Build Version: 1.4.2-Ayush-Beta</p>
-                <div className="flex gap-6 font-bold uppercase tracking-widest text-xs opacity-50">
+                <div className="flex gap-6 font-bold uppercase tracking-widest text-[10px] md:text-xs opacity-50">
                     <button className="hover:text-primary transition-colors">Documentation</button>
                     <button className="hover:text-primary transition-colors">Security Policy</button>
                 </div>
