@@ -1,10 +1,21 @@
-# 🏥 Ayush ICD-11 Mapping Platform
+<img align="center" src="frontend/public/Gemini_Generated_Image_bxbcikbxbcikbxbc.png" width="100%" height="200" style="object-fit: cover">
+
+<h1 align="center"> 🏥 Ayush ICD-11 Mapping Platform</h1>
+<div align="center">
 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 ![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?style=flat-square&logo=fastapi)
 ![Vite](https://img.shields.io/badge/Frontend-Vite_/_React-646CFF?style=flat-square&logo=vite)
 
+</div>
+
+## 🌟 Overview
+
+<div align="left">
+
 A premium, state-of-the-art healthcare interoperability platform designed to map traditional **Ayush** terminology to modern **ICD-11** and **FHIR** standards. Built with a focus on intelligence, speed, and a high-end user experience.
+
+</div>
 
 ---
 
@@ -115,3 +126,10 @@ npm run dev
 This platform represents a significant step forward in digitizing traditional medicine systems with international interoperability standards. It is currently in active development and maintenance.
 
 © 2025 Ayush Intelligence. All Rights Reserved.
+
+<div align="center">
+
+⭐ Star this repository if you found it useful  
+🧠 Bridging Traditional Ayush Wisdom with ICD-11 Standards  
+
+</div>
