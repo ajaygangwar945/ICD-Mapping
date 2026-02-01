@@ -121,14 +121,6 @@ npm run dev
 
 ---
 
-## 📄 Project Status
-
-This platform represents a significant step forward in digitizing traditional medicine systems with international interoperability standards. It is currently in active development and maintenance.
-
-© 2026 Ayush Intelligence. All Rights Reserved.
-
----
-
 <div align="center">
 
 ⭐ Star this repository if you found it useful  
