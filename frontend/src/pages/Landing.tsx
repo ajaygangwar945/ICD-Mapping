@@ -272,7 +272,7 @@ export const Landing = () => {
                         <span className="font-bold text-xl">Ayush Intelligence</span>
                     </div>
                     <div className="text-muted-foreground text-sm italic">
-                        © 2025 Ayush Intelligence Platform
+                        © 2026 Ayush Intelligence Platform
                     </div>
                     <div className="flex gap-6">
                         <Link to="/settings" className="text-sm text-muted-foreground hover:text-primary">Privacy Policy</Link>

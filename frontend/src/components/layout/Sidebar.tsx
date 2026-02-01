@@ -80,7 +80,7 @@ export const Sidebar = ({ onClose }: SidebarProps) => {
 
             {/* Footer */}
             <div className="p-4 border-t border-border text-xs text-muted-foreground text-center">
-                <p>© 2025 Ayush Intelligence</p>
+                <p>© 2026 Ayush Intelligence</p>
                 <p className="mt-1">Healthcare Interoperability Platform</p>
             </div>
         </div>
