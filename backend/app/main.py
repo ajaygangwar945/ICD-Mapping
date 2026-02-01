@@ -37,13 +37,17 @@ async def serve_spa(full_path: str):
     if full_path.startswith("api/"):
         return {"detail": "Not Found"}
         
+    # Get the directory of the current file
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    static_dir = os.path.join(os.path.dirname(current_dir), "static")
+    
     # Check if the requested path corresponds to a static file (e.g., assets/main.js)
-    static_file = os.path.join("static", full_path)
+    static_file = os.path.join(static_dir, full_path)
     if os.path.isfile(static_file):
         return FileResponse(static_file)
     
     # For any other route (like /ingestion, /fhir), serve index.html to let React Router handle it
-    index_path = os.path.join("static", "index.html")
+    index_path = os.path.join(static_dir, "index.html")
     if os.path.exists(index_path):
         return FileResponse(index_path)
     

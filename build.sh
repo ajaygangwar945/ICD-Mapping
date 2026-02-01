@@ -14,8 +14,8 @@ cd ..
 
 # Prepare Static Files for Backend
 echo "Moving frontend build to backend/static..."
-mkdir -p static
-cp -r frontend/dist/* static/
+mkdir -p backend/static
+cp -r frontend/dist/* backend/static/
 
 # Try to find requirements.txt in potential locations
 if [ -f "requirements.txt" ]; then

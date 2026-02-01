@@ -44,18 +44,18 @@ export const Dashboard = () => {
                         <TrendingUp className="w-4 h-4" />
                         System Status: Operational
                     </div>
-                    <h1 className="text-4xl font-bold tracking-tight">Dashboard Overview</h1>
+                    <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Dashboard Overview</h1>
                     <p className="text-muted-foreground text-lg max-w-2xl">
                         Real-time intelligence and analytics for Ayush healthcare interoperability and ICD-11 mapping.
                     </p>
                 </div>
 
                 <div className="flex gap-3">
-                    <button className="px-6 py-3 bg-muted hover:bg-muted/80 rounded-xl font-bold transition-all flex items-center gap-2">
+                    <button className="flex-1 md:flex-none px-4 md:px-6 py-3 bg-muted hover:bg-muted/80 rounded-xl font-bold transition-all flex items-center justify-center gap-2 text-sm md:text-base">
                         <FileText className="w-4 h-4" />
-                        Export Audit Log
+                        Export
                     </button>
-                    <button className="px-6 py-3 bg-primary text-primary-foreground rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-all flex items-center gap-2">
+                    <button className="flex-1 md:flex-none px-4 md:px-6 py-3 bg-primary text-primary-foreground rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-all flex items-center justify-center gap-2 text-sm md:text-base">
                         <Sparkles className="w-4 h-4" />
                         Live Sync
                     </button>
@@ -70,7 +70,7 @@ export const Dashboard = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        className="group p-8 bg-card border border-border rounded-3xl shadow-sm hover:shadow-2xl hover:border-primary/50 transition-all cursor-pointer relative overflow-hidden"
+                        className="group p-6 md:p-8 bg-card border border-border rounded-3xl shadow-sm hover:shadow-2xl hover:border-primary/50 transition-all cursor-pointer relative overflow-hidden"
                     >
                         <div className="absolute -right-4 -bottom-4 opacity-[0.02] group-hover:opacity-[0.05] group-hover:scale-110 transition-all">
                             <stat.icon className="w-32 h-32 text-primary" />
@@ -86,8 +86,8 @@ export const Dashboard = () => {
                             </div>
                         </div>
                         <div className="relative">
-                            <h3 className="text-3xl font-bold mb-1 group-hover:translate-x-1 transition-transform">{stat.value}</h3>
-                            <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest italic">{stat.label}</p>
+                            <h3 className="text-2xl md:text-3xl font-bold mb-1 group-hover:translate-x-1 transition-transform">{stat.value}</h3>
+                            <p className="text-[10px] md:text-sm font-medium text-muted-foreground uppercase tracking-widest italic">{stat.label}</p>
                         </div>
                     </motion.div>
                 ))}
@@ -99,9 +99,9 @@ export const Dashboard = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
-                className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+                className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8"
             >
-                <div className="lg:col-span-2 p-10 bg-card border border-border rounded-3xl min-h-[450px] relative overflow-hidden group shadow-sm">
+                <div className="lg:col-span-2 p-6 md:p-10 bg-card border border-border rounded-3xl min-h-[350px] md:min-h-[450px] relative overflow-hidden group shadow-sm">
                     <div className="flex items-center justify-between mb-8">
                         <h3 className="text-xl font-bold flex items-center gap-3">
                             <div className="p-2 bg-primary/10 rounded-lg">
@@ -123,7 +123,7 @@ export const Dashboard = () => {
                     </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-primary via-primary/90 to-primary/70 rounded-3xl p-10 text-primary-foreground text-center flex flex-col items-center justify-center shadow-2xl relative overflow-hidden group">
+                <div className="bg-gradient-to-br from-primary via-primary/90 to-primary/70 rounded-3xl p-6 md:p-10 text-primary-foreground text-center flex flex-col items-center justify-center shadow-2xl relative overflow-hidden group">
                     <div className="absolute inset-0 opacity-10 pointer-events-none group-hover:scale-110 transition-transform duration-1000">
                         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                             <path d="M0,50 Q25,30 50,50 T100,50" fill="none" stroke="currentColor" strokeWidth="0.5" />
@@ -132,14 +132,14 @@ export const Dashboard = () => {
                         </svg>
                     </div>
 
-                    <div className="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center mb-6 backdrop-blur-md shadow-xl transition-transform group-hover:scale-110">
-                        <Search className="w-10 h-10 text-white" />
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-white/20 rounded-3xl flex items-center justify-center mb-4 md:mb-6 backdrop-blur-md shadow-xl transition-transform group-hover:scale-110">
+                        <Search className="w-8 h-8 md:w-10 md:h-10 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-3 italic tracking-tight">Expand Your Reach</h3>
-                    <p className="text-primary-foreground/80 text-lg mb-10 leading-relaxed italic">
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 italic tracking-tight">Expand Your Reach</h3>
+                    <p className="text-primary-foreground/80 md:text-lg mb-8 md:mb-10 leading-relaxed italic">
                         Instantly map local traditional terminology to international standards with 99% accuracy.
                     </p>
-                    <button className="w-full bg-white text-primary font-bold py-4 rounded-2xl hover:bg-primary-foreground transition-all shadow-xl hover:-translate-y-1 active:translate-y-0">
+                    <button className="w-full bg-white text-primary font-bold py-3 md:py-4 rounded-2xl hover:bg-primary-foreground transition-all shadow-xl hover:-translate-y-1 active:translate-y-0 text-sm md:text-base">
                         New Search Session
                     </button>
                     <p className="mt-6 text-xs font-medium text-white/40 uppercase tracking-[0.2em]">Next-Gen Interop Engine</p>

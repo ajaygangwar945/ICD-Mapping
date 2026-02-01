@@ -8,11 +8,13 @@ import { DataIngestion } from "@/pages/DataIngestion";
 import { FhirResources } from "@/pages/FhirResources";
 import { Settings } from "@/pages/Settings";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Landing />} />

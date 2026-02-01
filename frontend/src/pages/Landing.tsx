@@ -93,7 +93,7 @@ export const Landing = () => {
                     </svg>
                 </div>
 
-                <div className="relative max-w-7xl mx-auto px-8 py-24 text-center">
+                <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -106,7 +106,7 @@ export const Landing = () => {
                             <Shield className="w-12 h-12" />
                         </div>
 
-                        <h1 className="text-6xl font-bold tracking-tight mb-4">
+                        <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">
                             Ayush Intelligence & FHIR
                         </h1>
                         <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
@@ -140,7 +140,7 @@ export const Landing = () => {
                 {/* Background Decoration */}
                 <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
-                <div className="max-w-7xl mx-auto px-8 relative">
+                <div className="max-w-7xl mx-auto px-6 md:px-8 relative">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -159,7 +159,7 @@ export const Landing = () => {
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                         {features.slice(0, 4).map((feature, idx) => (
                             <motion.div
                                 key={feature.title}
@@ -172,13 +172,13 @@ export const Landing = () => {
                                     to={feature.link}
                                     className="block h-full p-8 bg-card border border-border rounded-3xl hover:border-primary/50 transition-all hover:-translate-y-2 group shadow-sm hover:shadow-xl"
                                 >
-                                    <div className={`w-14 h-14 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                                        <feature.icon className={`w-7 h-7 ${feature.color}`} />
+                                    <div className={`w-12 h-12 md:w-14 md:h-14 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform`}>
+                                        <feature.icon className={`w-6 h-6 md:w-7 md:h-7 ${feature.color}`} />
                                     </div>
-                                    <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                                    <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 group-hover:text-primary transition-colors">
                                         {feature.title}
                                     </h3>
-                                    <p className="text-muted-foreground leading-relaxed italic">{feature.description}</p>
+                                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">{feature.description}</p>
                                 </Link>
                             </motion.div>
                         ))}
@@ -188,15 +188,15 @@ export const Landing = () => {
 
             {/* Explore Features */}
             <section className="py-24 bg-muted/30">
-                <div className="max-w-7xl mx-auto px-8 text-center mb-16">
-                    <h2 className="text-4xl font-bold mb-4">Explore Our Features</h2>
+                <div className="max-w-7xl mx-auto px-6 md:px-8 text-center mb-12 md:mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Explore Our Features</h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
                         Navigate through our comprehensive healthcare interoperability platform using
                         the sidebar or the quick access cards below.
                     </p>
                 </div>
 
-                <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {features.map((feature, idx) => (
                         <motion.div
                             key={feature.title}
@@ -265,8 +265,8 @@ export const Landing = () => {
                 </div>
             </section>
 
-            <footer className="py-12 border-t border-border bg-card">
-                <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+            <footer className="py-10 md:py-12 border-t border-border bg-card">
+                <div className="max-w-7xl mx-auto px-6 md:px-8 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
                     <div className="flex items-center gap-3">
                         <img src="/favicon.svg" alt="Ayush Intelligence Logo" className="w-10 h-10 rounded-xl" />
                         <span className="font-bold text-xl">Ayush Intelligence</span>

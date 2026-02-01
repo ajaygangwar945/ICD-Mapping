@@ -1,13 +1,67 @@
-# Ayush ICD-11 Mapping Platform
+# 🏥 Ayush ICD-11 Mapping Platform
 
-A premium, state-of-the-art healthcare interoperability platform designed to map traditional Ayush terminology to modern ICD-11 and FHIR standards.
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
+![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?style=flat-square&logo=fastapi)
+![Vite](https://img.shields.io/badge/Frontend-Vite_/_React-646CFF?style=flat-square&logo=vite)
 
-## ✨ Features
+A premium, state-of-the-art healthcare interoperability platform designed to map traditional **Ayush** terminology to modern **ICD-11** and **FHIR** standards. Built with a focus on intelligence, speed, and a high-end user experience.
 
-- **Neural Mapping Engine**: Intelligent search and translation between NAMASTE and ICD-11.
-- **Dark Mode Support**: Fully integrated theme switching with a premium dark aesthetic.
-- **FHIR R4 Compliant**: Generates and manages healthcare terminology resources.
-- **Glassmorphic UI**: High-end modern design using Framer Motion and TailwindCSS.
+---
+
+## 🚀 Live Website
+
+The project is fully deployed and accessible online.  
+
+[![Live](https://img.shields.io/badge/Live-Visit%20Site-brightgreen?style=flat-square)](https://icd-mapping.onrender.com)
+
+---
+
+## ✨ Key Features
+
+- 🧠 **Neural Mapping Engine**: Intelligent search and translation between NAMASTE and ICD-11.
+- 📱 **Mobile First Design**: Fully responsive UI that works seamlessly on any device.
+- 🌓 **Adaptive Theming**: Premium dark and light modes with glassmorphic aesthetics.
+- 🏥 **FHIR R4 Integration**: Native support for healthcare terminology resources.
+- ⚡ **High Performance**: Built with Vite and FastAPI for sub-second response times.
+
+---
+
+## 🛠️ Project Architecture
+
+The project follows a modern decoupled architecture:
+
+- **`/frontend`**: React + Vite + TailwindCSS + Lucide Icons.
+- **`/backend`**: FastAPI + Python 3.11 + Pydantic.
+- **`/backend/static`**: Production build of the frontend served via the backend.
+
+## 📂 File Structure
+
+```text
+.
+├── backend/                # FastAPI Backend
+│   ├── app/                # Application logic
+│   │   ├── api/            # API endpoints & routing
+│   │   ├── core/           # Configuration & security
+│   │   ├── data/           # Database models & schemas
+│   │   └── services/       # Business logic & mapping engine
+│   ├── static/             # Frontend production build (generated)
+│   ├── requirements.txt    # Backend dependencies
+│   └── venv/               # Python virtual environment
+├── frontend/               # React Frontend
+│   ├── src/                # Source code
+│   │   ├── components/     # Reusable UI components
+│   │   ├── pages/          # Application views
+│   │   ├── App.tsx         # Main app entry point
+│   │   └── main.tsx        # React mounting point
+│   ├── public/             # Static assets
+│   ├── package.json        # Frontend dependencies
+│   └── vite.config.ts      # Vite configuration
+├── build.sh                # Unified build script
+├── main.py                 # Root entry point (Production)
+├── pyproject.toml          # Project configuration
+├── render.yaml             # Render deployment config
+└── README.md               # Project documentation
+```
 
 ---
 
@@ -15,44 +69,28 @@ A premium, state-of-the-art healthcare interoperability platform designed to map
 
 ### Prerequisites
 
-- **Python**: 3.9+ (3.11 recommended)
-- **Node.js**: 18.x or later
-- **Git**
+| Tool | Version |
+| :--- | :--- |
+| **Python** | 3.11+ |
+| **Node.js** | 18.x or later |
+| **Git** | Latest |
 
-### 1. Repository Setup
+### 1. Development Mode (Hot-Reloading)
 
-```bash
-git clone https://github.com/ajaygangwar945/ICD-Mapping.git
-cd ICD-Mapping
-```
+> [!NOTE]
+> Recommended for testing UI changes and API adjustments.
 
----
-
-## 🛠️ Running the Project (Stepwise)
-
-### Option A: Development Mode (Recommended for testing UI)
-
-*Runs Backend and Frontend separately for hot-reloading.*
-
-#### 1. Start the Backend
+#### **Backend**
 
 ```bash
 cd backend
 python -m venv venv
-# Windows:
 .\venv\Scripts\activate
-# Linux/macOS:
-source venv/bin/activate
-
 pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8000
 ```
 
-*Backend will be available at: <http://localhost:8000>*
-
-#### 2. Start the Frontend
-
-In a **new terminal**:
+#### **Frontend**
 
 ```bash
 cd frontend
@@ -60,51 +98,20 @@ npm install
 npm run dev
 ```
 
-*Frontend will be available at: <http://localhost:5173>*
+*Access at: [http://localhost:5173](http://localhost:5173)*
+
+### 2. Production Mode (Unified)
+
+> [!TIP]
+> Use this to test the final application as a single package.
+
+1. Build frontend: `cd frontend && npm run build`
+2. Run automation: `run_monolith.bat`
 
 ---
 
-### Option B: Production Mode (Monolithic)
+## 📄 Project Status
 
-*Builds the frontend and serves it directly via the backend server.*
+This platform represents a significant step forward in digitizing traditional medicine systems with international interoperability standards. It is currently in active development and maintenance.
 
-#### 1. Build the Frontend
-
-```bash
-cd frontend
-npm install
-npm run build
-```
-
-#### 2. Prepare Backend Static Files
-
-Copy the `dist` folder to the backend:
-
-```bash
-# Windows (PowerShell):
-Copy-Item -Path ".\dist\*" -Destination "..\backend\static" -Recurse -Force
-# Linux/macOS:
-cp -r dist/* ../backend/static
-```
-
-#### 3. Run Unified Server
-
-```bash
-cd ../backend
-# Activate venv if not already done
-uvicorn app.main:app --port 8000
-```
-
-*The full application (Frontend + API) will be available at: <http://localhost:8000>*
-
----
-
-## 🏗️ Project Structure
-
-- `/frontend`: React + Vite application (UI/UX).
-- `/backend`: FastAPI application (Mapping Logic & FHIR).
-- `/legacy_backup`: Archival of previous iterations.
-
-## 📄 License
-
-This project is developed for the Smart India Hackathon (SIH) 2024.
+© 2025 Ayush Intelligence. All Rights Reserved.

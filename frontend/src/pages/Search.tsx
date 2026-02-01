@@ -39,12 +39,12 @@ export const Search = () => {
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-center space-y-4"
+        className="text-center space-y-3"
       >
-        <h1 className="text-5xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-violet-500 bg-clip-text text-transparent">
+        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-violet-500 bg-clip-text text-transparent">
           Ayush Intelligence Search
         </h1>
-        <p className="text-muted-foreground text-xl max-w-2xl mx-auto italic">
+        <p className="text-muted-foreground md:text-xl max-w-2xl mx-auto italic text-sm">
           Map traditional terminology to globally recognized medical standards with neural accuracy.
         </p>
       </motion.div>
@@ -52,28 +52,28 @@ export const Search = () => {
       {/* Main Search Interface */}
       <div className="relative group max-w-3xl mx-auto">
         <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-violet-500/20 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
-        <div className="relative bg-card border border-border rounded-2xl p-8 shadow-2xl">
+        <div className="relative bg-card border border-border rounded-2xl p-4 md:p-8 shadow-2xl">
           <div className="relative">
-            <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-muted-foreground" />
+            <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 md:w-6 h-5 md:h-6 text-muted-foreground" />
             <input
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-              placeholder="Search medical terms (e.g., Amlapitta, Jwara)..."
-              className="w-full pl-12 pr-4 py-4 bg-muted/50 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all text-lg"
+              placeholder="Search medical terms (e.g., Amlapitta)..."
+              className="w-full pl-11 md:pl-12 pr-4 py-3 md:py-4 bg-muted/50 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all text-base md:text-lg"
             />
           </div>
-          <div className="flex gap-4 mt-6">
+          <div className="flex gap-2 md:gap-4 mt-4 md:mt-6">
             <button
               onClick={handleSearch}
               disabled={loading}
-              className="flex-1 bg-primary text-primary-foreground py-4 rounded-xl font-bold hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary/25 disabled:opacity-50"
+              className="flex-1 bg-primary text-primary-foreground py-3 md:py-4 rounded-xl font-bold hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary/25 disabled:opacity-50 text-sm md:text-base"
             >
-              {loading ? "Analyzing..." : "Find Intelligent Mappings"}
+              {loading ? "Analyzing..." : "Find Mappings"}
             </button>
-            <button className="px-6 bg-muted hover:bg-muted/80 rounded-xl transition-colors" title="View Search History">
-              <History className="w-6 h-6" />
+            <button className="px-5 md:px-6 bg-muted hover:bg-muted/80 rounded-xl transition-colors" title="View Search History">
+              <History className="w-5 md:w-6 h-5 md:h-6" />
             </button>
           </div>
         </div>
@@ -96,17 +96,17 @@ export const Search = () => {
                   key={result.id}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  className="bg-card border border-border p-6 rounded-2xl hover:border-primary/50 transition-all group cursor-pointer shadow-sm hover:shadow-md"
+                  className="bg-card border border-border p-4 md:p-6 rounded-2xl hover:border-primary/50 transition-all group cursor-pointer shadow-sm hover:shadow-md"
                 >
                   <div className="flex items-center justify-between">
                     <div className="space-y-1">
-                      <div className="flex items-center gap-3">
-                        <span className="text-lg font-bold">{result.term}</span>
-                        <span className="text-xs px-2 py-0.5 bg-muted rounded border border-border font-mono text-muted-foreground">
+                      <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
+                        <span className="text-base md:text-lg font-bold">{result.term}</span>
+                        <span className="w-fit text-[10px] px-2 py-0.5 bg-muted rounded border border-border font-mono text-muted-foreground">
                           {result.code}
                         </span>
                       </div>
-                      <p className="text-primary font-bold italic flex items-center gap-2">
+                      <p className="text-primary font-bold italic flex items-center gap-2 text-sm md:text-base">
                         <ChevronRight className="w-4 h-4" />
                         {result.match}
                       </p>
