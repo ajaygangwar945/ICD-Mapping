@@ -6,6 +6,22 @@ import os
 from app.api.routes import router as api_router
 from app.api.settings import router as settings_router
 
+# Create FastAPI app instance
+app = FastAPI(
+    title="AYUSH FHIR Integration Platform",
+    description="API for integrating AYUSH systems with FHIR standards",
+    version="2.0.0"
+)
+
+# Configure CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, replace with specific origins
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # Include API routes
 app.include_router(api_router)
 app.include_router(settings_router)
