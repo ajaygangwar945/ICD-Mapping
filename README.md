@@ -52,7 +52,10 @@ The project follows a modern decoupled architecture:
 ├── backend/                # FastAPI Backend
 │   ├── app/                # Application logic
 │   │   ├── api/            # API endpoints & routing
+│   │   │   ├── routes.py   # Main mapping endpoints
+│   │   │   └── settings.py # Auth & Audit configuration API
 │   │   ├── data/           # Static data & resources
+│   │   │   └── settings.json # Persisted configuration
 │   │   ├── services/       # Business logic & mapping engine
 │   │   └── main.py         # App entry point
 │   ├── static/             # Frontend production build (generated)
@@ -62,9 +65,17 @@ The project follows a modern decoupled architecture:
 │   ├── src/                # Source code
 │   │   ├── assets/         # Static assets & images
 │   │   ├── components/     # Reusable UI components
+│   │   │   ├── layout/     # Layout components (Sidebar, etc.)
+│   │   │   └── ui/         # UI primitives
 │   │   ├── config/         # App configuration
 │   │   ├── lib/            # Utility libraries
 │   │   ├── pages/          # Application views
+│   │   │   ├── Dashboard.tsx
+│   │   │   ├── Search.tsx
+│   │   │   ├── Translation.tsx
+│   │   │   ├── DataIngestion.tsx
+│   │   │   ├── FhirResources.tsx
+│   │   │   └── Settings.tsx # Auth & Audit page
 │   │   ├── App.tsx         # Main app entry point
 │   │   └── main.tsx        # React mounting point
 │   ├── public/             # Static assets

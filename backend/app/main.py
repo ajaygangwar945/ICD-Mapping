@@ -4,27 +4,11 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 import os
 from app.api.routes import router as api_router
-
-app = FastAPI(title="Ayush Intelligence API", version="2.0.0")
-
-# CORS
-origins = [
-    "http://localhost:5173",
-    "http://localhost:8000",
-    "https://icd-mapping.onrender.com",
-    "*"  # Allow all for development
-]
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+from app.api.settings import router as settings_router
 
 # Include API routes
 app.include_router(api_router)
+app.include_router(settings_router)
 
 @app.get("/health")
 async def health_check():
