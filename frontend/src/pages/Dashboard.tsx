@@ -2,6 +2,17 @@ import { motion } from "framer-motion";
 import { Activity, Database, FileText, Search, Users, ArrowUpRight, Sparkles, TrendingUp } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+
+const data = [
+    { name: 'Mon', value: 400 },
+    { name: 'Tue', value: 300 },
+    { name: 'Wed', value: 600 },
+    { name: 'Thu', value: 800 },
+    { name: 'Fri', value: 500 },
+    { name: 'Sat', value: 900 },
+    { name: 'Sun', value: 750 },
+];
 
 
 export const Dashboard = () => {
@@ -117,11 +128,51 @@ export const Dashboard = () => {
                             <option>All Time</option>
                         </select>
                     </div>
-                    <div className="flex h-[300px] items-center justify-center text-muted-foreground italic border-2 border-dashed border-border rounded-3xl group-hover:bg-muted/30 transition-colors">
-                        <div className="flex flex-col items-center gap-4">
-                            <Activity className="w-12 h-12 opacity-20" />
-                            Analytics Visualization Engine Ready
-                        </div>
+                    <div className="h-[350px] w-full">
+                        <ResponsiveContainer width="100%" height="100%">
+                            <AreaChart data={data}>
+                                <defs>
+                                    <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="5%" stopColor="#4f46e5" stopOpacity={0.3} />
+                                        <stop offset="95%" stopColor="#4f46e5" stopOpacity={0} />
+                                    </linearGradient>
+                                </defs>
+                                <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" vertical={false} opacity={0.5} />
+                                <XAxis
+                                    dataKey="name"
+                                    stroke="#9ca3af"
+                                    tickLine={false}
+                                    axisLine={false}
+                                    tick={{ fontSize: 12 }}
+                                    dy={10}
+                                />
+                                <YAxis
+                                    stroke="#9ca3af"
+                                    tickLine={false}
+                                    axisLine={false}
+                                    tick={{ fontSize: 12 }}
+                                    tickFormatter={(value: number) => `${value}`}
+                                    dx={-10}
+                                />
+                                <Tooltip
+                                    contentStyle={{
+                                        backgroundColor: "rgba(255, 255, 255, 0.9)",
+                                        borderRadius: "12px",
+                                        border: "none",
+                                        boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)"
+                                    }}
+                                    cursor={{ stroke: '#4f46e5', strokeWidth: 2 }}
+                                />
+                                <Area
+                                    type="monotone"
+                                    dataKey="value"
+                                    stroke="#4f46e5"
+                                    strokeWidth={3}
+                                    fillOpacity={1}
+                                    fill="url(#colorValue)"
+                                />
+                            </AreaChart>
+                        </ResponsiveContainer>
                     </div>
                 </div>
 

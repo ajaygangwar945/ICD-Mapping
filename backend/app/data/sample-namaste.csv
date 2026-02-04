@@ -1,4 +1,151 @@
 id,term,category,synonyms,icd11_tm2_code,references,description
-AY001,"Amlapitta","Ayurvedic Disease","Dyspepsia,Sour indigestion","TM2-AY134","Charaka Samhita","Acid dyspepsia characterized by sour belching and heartburn"
-AY002,"Vata Dosha Imbalance","Ayurvedic Constitutional Disorder","Wind disorder,Nervous system imbalance","","Sushruta Samhita","Imbalance of Vata dosha affecting movement and nervous functions"
-UN001,"Mizaj-e-Har","Unani Temperament","Hot temperament,Warm constitution","TM2-UN045","Canon of Medicine","Hot temperament in Unani medicine system"
+AY001,Amlapitta,Ayurvedic Disease,"Dyspepsia,Sour indigestion",TM2-AY134,Charaka Samhita,Acid dyspepsia characterized by sour belching and heartburn
+AY002,Vata Dosha Imbalance,Ayurvedic Constitutional Disorder,"Wind disorder,Nervous system imbalance",,Sushruta Samhita,Imbalance of Vata dosha affecting movement and nervous functions
+UN001,Mizaj-e-Har,Unani Temperament,"Hot temperament,Warm constitution",TM2-UN045,Canon of Medicine,Hot temperament in Unani medicine system
+SI002,Vatham,Siddha Condition,"Rheumatism,Wind humour",TM2-SI874,Siddha Materia Medica,A condition of Rheumatism characterized by Wind humour in Siddha Condition context.
+UN003,Yaraqan,Unani Disease,"Jaundice,Yellow skin",TM2-UN785,Canon of Medicine,A condition of Jaundice characterized by Yellow skin in Unani Disease context.
+SI003,Pitham,Siddha Condition,"Biliousness,Bile humour",TM2-SI453,Siddha Materia Medica,A condition of Biliousness characterized by Bile humour in Siddha Condition context.
+AY004,Apasmara,Ayurvedic Disease,"Epilepsy,Seizures",TM2-AY916,Charaka Samhita,A condition of Epilepsy characterized by Seizures in Ayurvedic Disease context.
+SI004,Sobai,Siddha Condition,"Anemia,Low blood",TM2-SI186,Siddha Materia Medica,A condition of Anemia characterized by Low blood in Siddha Condition context.
+SI005,Sobai,Siddha Condition,"Anemia,Low blood",TM2-SI692,Siddha Materia Medica,A condition of Anemia characterized by Low blood in Siddha Condition context.
+HO002,Silicea Profile,Homeopathic Indication,"Suppuration,Lack of grit",TM2-HO982,Organon of Medicine,A condition of Suppuration characterized by Lack of grit in Homeopathic Indication context.
+AY005,Arsha,Ayurvedic Disease,"Hemorrhoids,Piles",TM2-AY576,Charaka Samhita,A condition of Hemorrhoids characterized by Piles in Ayurvedic Disease context.
+UN004,War-e-Kabid,Unani Disease,"Hepatitis,Liver inflammation",TM2-UN731,Canon of Medicine,A condition of Hepatitis characterized by Liver inflammation in Unani Disease context.
+HO003,Lycopodium Profile,Homeopathic Indication,"Liver trouble,Right side",TM2-HO123,Organon of Medicine,A condition of Liver trouble characterized by Right side in Homeopathic Indication context.
+HO004,Gelsemium,Homeopathic Indication,"Flu,Dullness",TM2-HO245,Organon of Medicine,A condition of Flu characterized by Dullness in Homeopathic Indication context.
+SI006,Sobai,Siddha Condition,"Anemia,Low blood",TM2-SI632,Siddha Materia Medica,A condition of Anemia characterized by Low blood in Siddha Condition context.
+UN005,Nazla,Unani Disease,"Catarrh,Coryza",TM2-UN937,Canon of Medicine,A condition of Catarrh characterized by Coryza in Unani Disease context.
+SI007,Pitham,Siddha Condition,"Biliousness,Bile humour",TM2-SI522,Siddha Materia Medica,A condition of Biliousness characterized by Bile humour in Siddha Condition context.
+AY006,Shwasa,Ayurvedic Disease,"Asthma,Breathing difficulty",TM2-AY927,Charaka Samhita,A condition of Asthma characterized by Breathing difficulty in Ayurvedic Disease context.
+HO005,Gelsemium,Homeopathic Indication,"Flu,Dullness",TM2-HO243,Organon of Medicine,A condition of Flu characterized by Dullness in Homeopathic Indication context.
+SI008,Kuruthi Azhal,Siddha Condition,"Hypertension,High BP",TM2-SI523,Siddha Materia Medica,A condition of Hypertension characterized by High BP in Siddha Condition context.
+YO002,Core Strength,Yoga Therapy,"Abdominal Tone,Strength",TM2-YO985,Yoga Sutras,A condition of Abdominal Tone characterized by Strength in Yoga Therapy context.
+SI009,Sanni,Siddha Condition,"Delirium,Coma like",TM2-SI337,Siddha Materia Medica,A condition of Delirium characterized by Coma like in Siddha Condition context.
+SI010,Gunmam,Siddha Condition,"Gastritis,Ulcer",TM2-SI450,Siddha Materia Medica,A condition of Gastritis characterized by Ulcer in Siddha Condition context.
+HO006,Silicea Profile,Homeopathic Indication,"Suppuration,Lack of grit",TM2-HO322,Organon of Medicine,A condition of Suppuration characterized by Lack of grit in Homeopathic Indication context.
+UN006,Suda,Unani Disease,"Headache,Cephalalgia",TM2-UN925,Canon of Medicine,A condition of Headache characterized by Cephalalgia in Unani Disease context.
+HO007,Bryonia State,Homeopathic Indication,"Dry Cough,Worse motion",TM2-HO488,Organon of Medicine,A condition of Dry Cough characterized by Worse motion in Homeopathic Indication context.
+UN007,Zukan,Unani Disease,"Common Cold,Running nose",TM2-UN244,Canon of Medicine,A condition of Common Cold characterized by Running nose in Unani Disease context.
+HO008,Lycopodium Profile,Homeopathic Indication,"Liver trouble,Right side",TM2-HO479,Organon of Medicine,A condition of Liver trouble characterized by Right side in Homeopathic Indication context.
+SI011,Vatham,Siddha Condition,"Rheumatism,Wind humour",TM2-SI651,Siddha Materia Medica,A condition of Rheumatism characterized by Wind humour in Siddha Condition context.
+UN008,Laqwa,Unani Disease,"Facial Palsy,Face paralysis",TM2-UN996,Canon of Medicine,A condition of Facial Palsy characterized by Face paralysis in Unani Disease context.
+YO003,Back Pain Management,Yoga Therapy,"Lumbar Spondylosis,Spine care",TM2-YO629,Yoga Sutras,A condition of Lumbar Spondylosis characterized by Spine care in Yoga Therapy context.
+YO004,Flexibility Training,Yoga Therapy,"Stiffness,Mobility",TM2-YO118,Yoga Sutras,A condition of Stiffness characterized by Mobility in Yoga Therapy context.
+AY007,Amavata,Ayurvedic Disease,"Rheumatoid Arthritis,Joint swelling",TM2-AY132,Charaka Samhita,A condition of Rheumatoid Arthritis characterized by Joint swelling in Ayurvedic Disease context.
+AY008,Prameha,Ayurvedic Disease,"Diabetes,Polyuria",TM2-AY169,Charaka Samhita,A condition of Diabetes characterized by Polyuria in Ayurvedic Disease context.
+SI012,Iraippu,Siddha Condition,"Wheezing,Heavy breathing",TM2-SI756,Siddha Materia Medica,A condition of Wheezing characterized by Heavy breathing in Siddha Condition context.
+HO009,Eupatorium,Homeopathic Indication,"Bone Pain,Breakbone fever",TM2-HO377,Organon of Medicine,A condition of Bone Pain characterized by Breakbone fever in Homeopathic Indication context.
+UN009,Waj-ul-Mafasil,Unani Disease,"Joint Pain,Arthritis",TM2-UN320,Canon of Medicine,A condition of Joint Pain characterized by Arthritis in Unani Disease context.
+UN010,Suda,Unani Disease,"Headache,Cephalalgia",TM2-UN221,Canon of Medicine,A condition of Headache characterized by Cephalalgia in Unani Disease context.
+AY009,Grahani,Ayurvedic Disease,"IBS,Digestive disorder",TM2-AY770,Charaka Samhita,A condition of IBS characterized by Digestive disorder in Ayurvedic Disease context.
+YO005,Postnatal Yoga,Yoga Therapy,"Post-pregnancy,Recovery",TM2-YO111,Yoga Sutras,A condition of Post-pregnancy characterized by Recovery in Yoga Therapy context.
+HO010,Bryonia State,Homeopathic Indication,"Dry Cough,Worse motion",TM2-HO380,Organon of Medicine,A condition of Dry Cough characterized by Worse motion in Homeopathic Indication context.
+SI013,Sanni,Siddha Condition,"Delirium,Coma like",TM2-SI336,Siddha Materia Medica,A condition of Delirium characterized by Coma like in Siddha Condition context.
+AY010,Pandu,Ayurvedic Disease,"Anemia,Pallor",TM2-AY966,Charaka Samhita,A condition of Anemia characterized by Pallor in Ayurvedic Disease context.
+UN011,Yaraqan,Unani Disease,"Jaundice,Yellow skin",TM2-UN780,Canon of Medicine,A condition of Jaundice characterized by Yellow skin in Unani Disease context.
+HO011,Lycopodium Profile,Homeopathic Indication,"Liver trouble,Right side",TM2-HO950,Organon of Medicine,A condition of Liver trouble characterized by Right side in Homeopathic Indication context.
+SI014,Mega Noi,Siddha Condition,"Venereal Disease,STD",TM2-SI807,Siddha Materia Medica,A condition of Venereal Disease characterized by STD in Siddha Condition context.
+HO012,Ignatia State,Homeopathic Indication,"Grief,Hysteria",TM2-HO411,Organon of Medicine,A condition of Grief characterized by Hysteria in Homeopathic Indication context.
+YO006,Core Strength,Yoga Therapy,"Abdominal Tone,Strength",TM2-YO587,Yoga Sutras,A condition of Abdominal Tone characterized by Strength in Yoga Therapy context.
+SI015,Sobai,Siddha Condition,"Anemia,Low blood",TM2-SI720,Siddha Materia Medica,A condition of Anemia characterized by Low blood in Siddha Condition context.
+SI016,NeerizoVu,Siddha Condition,"Diabetes,Sweet urine",TM2-SI470,Siddha Materia Medica,A condition of Diabetes characterized by Sweet urine in Siddha Condition context.
+AY011,Shoola,Ayurvedic Disease,"Colic,Abdominal pain",TM2-AY195,Charaka Samhita,A condition of Colic characterized by Abdominal pain in Ayurvedic Disease context.
+HO013,Ignatia State,Homeopathic Indication,"Grief,Hysteria",TM2-HO852,Organon of Medicine,A condition of Grief characterized by Hysteria in Homeopathic Indication context.
+YO007,Meditation Focus,Yoga Therapy,"Dhyana,Concentration",TM2-YO895,Yoga Sutras,A condition of Dhyana characterized by Concentration in Yoga Therapy context.
+SI017,Kuruthi Azhal,Siddha Condition,"Hypertension,High BP",TM2-SI814,Siddha Materia Medica,A condition of Hypertension characterized by High BP in Siddha Condition context.
+YO008,Meditation Focus,Yoga Therapy,"Dhyana,Concentration",TM2-YO782,Yoga Sutras,A condition of Dhyana characterized by Concentration in Yoga Therapy context.
+SI018,Mega Noi,Siddha Condition,"Venereal Disease,STD",TM2-SI899,Siddha Materia Medica,A condition of Venereal Disease characterized by STD in Siddha Condition context.
+HO014,Bryonia State,Homeopathic Indication,"Dry Cough,Worse motion",TM2-HO577,Organon of Medicine,A condition of Dry Cough characterized by Worse motion in Homeopathic Indication context.
+HO015,Nux Vomica State,Homeopathic Indication,"Indigestion,Irritability",TM2-HO854,Organon of Medicine,A condition of Indigestion characterized by Irritability in Homeopathic Indication context.
+AY012,Unmada,Ayurvedic Disease,"Insanity,Psychosis",TM2-AY137,Charaka Samhita,A condition of Insanity characterized by Psychosis in Ayurvedic Disease context.
+SI019,Pitham,Siddha Condition,"Biliousness,Bile humour",TM2-SI834,Siddha Materia Medica,A condition of Biliousness characterized by Bile humour in Siddha Condition context.
+UN012,Khafaqan,Unani Disease,"Palpitation,Heart flutter",TM2-UN700,Canon of Medicine,A condition of Palpitation characterized by Heart flutter in Unani Disease context.
+HO016,Arnica Condition,Homeopathic Indication,"Trauma,Bruises",TM2-HO757,Organon of Medicine,A condition of Trauma characterized by Bruises in Homeopathic Indication context.
+UN013,Khafaqan,Unani Disease,"Palpitation,Heart flutter",TM2-UN199,Canon of Medicine,A condition of Palpitation characterized by Heart flutter in Unani Disease context.
+SI020,Gunmam,Siddha Condition,"Gastritis,Ulcer",TM2-SI163,Siddha Materia Medica,A condition of Gastritis characterized by Ulcer in Siddha Condition context.
+YO009,Prenatal Yoga,Yoga Therapy,"Pregnancy Care,Ante-natal",TM2-YO673,Yoga Sutras,A condition of Pregnancy Care characterized by Ante-natal in Yoga Therapy context.
+UN014,Hikka,Unani Disease,"Pruritus,Itching",TM2-UN425,Canon of Medicine,A condition of Pruritus characterized by Itching in Unani Disease context.
+SI021,Gunmam,Siddha Condition,"Gastritis,Ulcer",TM2-SI343,Siddha Materia Medica,A condition of Gastritis characterized by Ulcer in Siddha Condition context.
+SI022,Pitham,Siddha Condition,"Biliousness,Bile humour",TM2-SI752,Siddha Materia Medica,A condition of Biliousness characterized by Bile humour in Siddha Condition context.
+UN015,Zof-e-Bah,Unani Disease,"Sexual Debility,Weakness",TM2-UN582,Canon of Medicine,A condition of Sexual Debility characterized by Weakness in Unani Disease context.
+YO010,Prenatal Yoga,Yoga Therapy,"Pregnancy Care,Ante-natal",TM2-YO441,Yoga Sutras,A condition of Pregnancy Care characterized by Ante-natal in Yoga Therapy context.
+SI023,Kapham,Siddha Condition,"Phlegmatic Condition,Phlegm flavour",TM2-SI261,Siddha Materia Medica,A condition of Phlegmatic Condition characterized by Phlegm flavour in Siddha Condition context.
+YO011,Breath Control,Yoga Therapy,"Pranayama,Lung capacity",TM2-YO127,Yoga Sutras,A condition of Pranayama characterized by Lung capacity in Yoga Therapy context.
+HO017,Lycopodium Profile,Homeopathic Indication,"Liver trouble,Right side",TM2-HO657,Organon of Medicine,A condition of Liver trouble characterized by Right side in Homeopathic Indication context.
+UN016,Waj-ul-Mafasil,Unani Disease,"Joint Pain,Arthritis",TM2-UN352,Canon of Medicine,A condition of Joint Pain characterized by Arthritis in Unani Disease context.
+YO012,Breath Control,Yoga Therapy,"Pranayama,Lung capacity",TM2-YO301,Yoga Sutras,A condition of Pranayama characterized by Lung capacity in Yoga Therapy context.
+UN017,Niqras,Unani Disease,"Gout,Podagra",TM2-UN124,Canon of Medicine,A condition of Gout characterized by Podagra in Unani Disease context.
+AY013,Pandu,Ayurvedic Disease,"Anemia,Pallor",TM2-AY765,Charaka Samhita,A condition of Anemia characterized by Pallor in Ayurvedic Disease context.
+SI024,Gunmam,Siddha Condition,"Gastritis,Ulcer",TM2-SI890,Siddha Materia Medica,A condition of Gastritis characterized by Ulcer in Siddha Condition context.
+HO018,Pulsatilla Profile,Homeopathic Indication,"Weepiness,Changeable",TM2-HO873,Organon of Medicine,A condition of Weepiness characterized by Changeable in Homeopathic Indication context.
+SI025,Vatham,Siddha Condition,"Rheumatism,Wind humour",TM2-SI483,Siddha Materia Medica,A condition of Rheumatism characterized by Wind humour in Siddha Condition context.
+YO013,Weight Reduction,Yoga Therapy,"Obesity,Fat loss",TM2-YO407,Yoga Sutras,A condition of Obesity characterized by Fat loss in Yoga Therapy context.
+UN018,Yaraqan,Unani Disease,"Jaundice,Yellow skin",TM2-UN738,Canon of Medicine,A condition of Jaundice characterized by Yellow skin in Unani Disease context.
+UN019,Ziabetus,Unani Disease,"Diabetes,High blood sugar",TM2-UN109,Canon of Medicine,A condition of Diabetes characterized by High blood sugar in Unani Disease context.
+SI026,Pitham,Siddha Condition,"Biliousness,Bile humour",TM2-SI419,Siddha Materia Medica,A condition of Biliousness characterized by Bile humour in Siddha Condition context.
+SI027,Sanni,Siddha Condition,"Delirium,Coma like",TM2-SI547,Siddha Materia Medica,A condition of Delirium characterized by Coma like in Siddha Condition context.
+AY014,Ashmari,Ayurvedic Disease,"Calculus,Stones",TM2-AY439,Charaka Samhita,A condition of Calculus characterized by Stones in Ayurvedic Disease context.
+YO014,Prenatal Yoga,Yoga Therapy,"Pregnancy Care,Ante-natal",TM2-YO939,Yoga Sutras,A condition of Pregnancy Care characterized by Ante-natal in Yoga Therapy context.
+AY015,Shwasa,Ayurvedic Disease,"Asthma,Breathing difficulty",TM2-AY557,Charaka Samhita,A condition of Asthma characterized by Breathing difficulty in Ayurvedic Disease context.
+AY016,Shwasa,Ayurvedic Disease,"Asthma,Breathing difficulty",TM2-AY600,Charaka Samhita,A condition of Asthma characterized by Breathing difficulty in Ayurvedic Disease context.
+UN020,Zof-e-Bah,Unani Disease,"Sexual Debility,Weakness",TM2-UN390,Canon of Medicine,A condition of Sexual Debility characterized by Weakness in Unani Disease context.
+YO015,Meditation Focus,Yoga Therapy,"Dhyana,Concentration",TM2-YO947,Yoga Sutras,A condition of Dhyana characterized by Concentration in Yoga Therapy context.
+AY017,Sthoulya,Ayurvedic Disease,"Obesity,Overweight",TM2-AY609,Charaka Samhita,A condition of Obesity characterized by Overweight in Ayurvedic Disease context.
+AY018,Unmada,Ayurvedic Disease,"Insanity,Psychosis",TM2-AY261,Charaka Samhita,A condition of Insanity characterized by Psychosis in Ayurvedic Disease context.
+UN021,Niqras,Unani Disease,"Gout,Podagra",TM2-UN120,Canon of Medicine,A condition of Gout characterized by Podagra in Unani Disease context.
+UN022,Shaqiqa,Unani Disease,"Migraine,Hemicrania",TM2-UN613,Canon of Medicine,A condition of Migraine characterized by Hemicrania in Unani Disease context.
+AY019,Shoola,Ayurvedic Disease,"Colic,Abdominal pain",TM2-AY607,Charaka Samhita,A condition of Colic characterized by Abdominal pain in Ayurvedic Disease context.
+UN023,Hikka,Unani Disease,"Pruritus,Itching",TM2-UN669,Canon of Medicine,A condition of Pruritus characterized by Itching in Unani Disease context.
+SI028,Sanni,Siddha Condition,"Delirium,Coma like",TM2-SI472,Siddha Materia Medica,A condition of Delirium characterized by Coma like in Siddha Condition context.
+HO019,Eupatorium,Homeopathic Indication,"Bone Pain,Breakbone fever",TM2-HO845,Organon of Medicine,A condition of Bone Pain characterized by Breakbone fever in Homeopathic Indication context.
+SI029,Vatham,Siddha Condition,"Rheumatism,Wind humour",TM2-SI663,Siddha Materia Medica,A condition of Rheumatism characterized by Wind humour in Siddha Condition context.
+YO016,Weight Reduction,Yoga Therapy,"Obesity,Fat loss",TM2-YO254,Yoga Sutras,A condition of Obesity characterized by Fat loss in Yoga Therapy context.
+HO020,Sulphur Profile,Homeopathic Indication,"Skin eruption,Burning",TM2-HO109,Organon of Medicine,A condition of Skin eruption characterized by Burning in Homeopathic Indication context.
+SI030,Gunmam,Siddha Condition,"Gastritis,Ulcer",TM2-SI204,Siddha Materia Medica,A condition of Gastritis characterized by Ulcer in Siddha Condition context.
+HO021,Gelsemium,Homeopathic Indication,"Flu,Dullness",TM2-HO275,Organon of Medicine,A condition of Flu characterized by Dullness in Homeopathic Indication context.
+UN024,Zof-e-Bah,Unani Disease,"Sexual Debility,Weakness",TM2-UN649,Canon of Medicine,A condition of Sexual Debility characterized by Weakness in Unani Disease context.
+AY020,Unmada,Ayurvedic Disease,"Insanity,Psychosis",TM2-AY544,Charaka Samhita,A condition of Insanity characterized by Psychosis in Ayurvedic Disease context.
+AY021,Hridroga,Ayurvedic Disease,"Heart Disease,Cardiac disorder",TM2-AY306,Charaka Samhita,A condition of Heart Disease characterized by Cardiac disorder in Ayurvedic Disease context.
+HO022,Silicea Profile,Homeopathic Indication,"Suppuration,Lack of grit",TM2-HO397,Organon of Medicine,A condition of Suppuration characterized by Lack of grit in Homeopathic Indication context.
+HO023,Ignatia State,Homeopathic Indication,"Grief,Hysteria",TM2-HO264,Organon of Medicine,A condition of Grief characterized by Hysteria in Homeopathic Indication context.
+SI031,Vatham,Siddha Condition,"Rheumatism,Wind humour",TM2-SI656,Siddha Materia Medica,A condition of Rheumatism characterized by Wind humour in Siddha Condition context.
+AY022,Pandu,Ayurvedic Disease,"Anemia,Pallor",TM2-AY686,Charaka Samhita,A condition of Anemia characterized by Pallor in Ayurvedic Disease context.
+AY023,Vatarakta,Ayurvedic Disease,"Gout,Joint pain",TM2-AY601,Charaka Samhita,A condition of Gout characterized by Joint pain in Ayurvedic Disease context.
+SI032,Mega Noi,Siddha Condition,"Venereal Disease,STD",TM2-SI117,Siddha Materia Medica,A condition of Venereal Disease characterized by STD in Siddha Condition context.
+HO024,Rhus Tox State,Homeopathic Indication,"Joint Stiffness,Better motion",TM2-HO409,Organon of Medicine,A condition of Joint Stiffness characterized by Better motion in Homeopathic Indication context.
+UN025,Waj-ul-Mafasil,Unani Disease,"Joint Pain,Arthritis",TM2-UN654,Canon of Medicine,A condition of Joint Pain characterized by Arthritis in Unani Disease context.
+AY024,Ashmari,Ayurvedic Disease,"Calculus,Stones",TM2-AY986,Charaka Samhita,A condition of Calculus characterized by Stones in Ayurvedic Disease context.
+AY025,Kamala,Ayurvedic Disease,"Jaundice,Icterus",TM2-AY890,Charaka Samhita,A condition of Jaundice characterized by Icterus in Ayurvedic Disease context.
+YO017,Weight Reduction,Yoga Therapy,"Obesity,Fat loss",TM2-YO401,Yoga Sutras,A condition of Obesity characterized by Fat loss in Yoga Therapy context.
+YO018,Breath Control,Yoga Therapy,"Pranayama,Lung capacity",TM2-YO675,Yoga Sutras,A condition of Pranayama characterized by Lung capacity in Yoga Therapy context.
+HO025,Rhus Tox State,Homeopathic Indication,"Joint Stiffness,Better motion",TM2-HO447,Organon of Medicine,A condition of Joint Stiffness characterized by Better motion in Homeopathic Indication context.
+AY026,Arsha,Ayurvedic Disease,"Hemorrhoids,Piles",TM2-AY366,Charaka Samhita,A condition of Hemorrhoids characterized by Piles in Ayurvedic Disease context.
+UN026,Nazla,Unani Disease,"Catarrh,Coryza",TM2-UN572,Canon of Medicine,A condition of Catarrh characterized by Coryza in Unani Disease context.
+UN027,Ziabetus,Unani Disease,"Diabetes,High blood sugar",TM2-UN448,Canon of Medicine,A condition of Diabetes characterized by High blood sugar in Unani Disease context.
+UN028,Yaraqan,Unani Disease,"Jaundice,Yellow skin",TM2-UN821,Canon of Medicine,A condition of Jaundice characterized by Yellow skin in Unani Disease context.
+UN029,Zof-e-Bah,Unani Disease,"Sexual Debility,Weakness",TM2-UN253,Canon of Medicine,A condition of Sexual Debility characterized by Weakness in Unani Disease context.
+AY027,Kasa,Ayurvedic Disease,"Cough,Bronchitis",TM2-AY437,Charaka Samhita,A condition of Cough characterized by Bronchitis in Ayurvedic Disease context.
+AY028,Mutrakrichha,Ayurvedic Disease,"Dysuria,Painful urination",TM2-AY853,Charaka Samhita,A condition of Dysuria characterized by Painful urination in Ayurvedic Disease context.
+HO026,Arsenicum Album,Homeopathic Indication,"Food Poisoning,Restlessness",TM2-HO820,Organon of Medicine,A condition of Food Poisoning characterized by Restlessness in Homeopathic Indication context.
+YO019,Prenatal Yoga,Yoga Therapy,"Pregnancy Care,Ante-natal",TM2-YO663,Yoga Sutras,A condition of Pregnancy Care characterized by Ante-natal in Yoga Therapy context.
+SI033,Kuruthi Azhal,Siddha Condition,"Hypertension,High BP",TM2-SI940,Siddha Materia Medica,A condition of Hypertension characterized by High BP in Siddha Condition context.
+AY029,Amavata,Ayurvedic Disease,"Rheumatoid Arthritis,Joint swelling",TM2-AY687,Charaka Samhita,A condition of Rheumatoid Arthritis characterized by Joint swelling in Ayurvedic Disease context.
+AY030,Mutrakrichha,Ayurvedic Disease,"Dysuria,Painful urination",TM2-AY767,Charaka Samhita,A condition of Dysuria characterized by Painful urination in Ayurvedic Disease context.
+AY031,Arsha,Ayurvedic Disease,"Hemorrhoids,Piles",TM2-AY310,Charaka Samhita,A condition of Hemorrhoids characterized by Piles in Ayurvedic Disease context.
+YO020,Breath Control,Yoga Therapy,"Pranayama,Lung capacity",TM2-YO252,Yoga Sutras,A condition of Pranayama characterized by Lung capacity in Yoga Therapy context.
+SI034,Sobai,Siddha Condition,"Anemia,Low blood",TM2-SI238,Siddha Materia Medica,A condition of Anemia characterized by Low blood in Siddha Condition context.
+YO021,Flexibility Training,Yoga Therapy,"Stiffness,Mobility",TM2-YO119,Yoga Sutras,A condition of Stiffness characterized by Mobility in Yoga Therapy context.
+SI035,Vatham,Siddha Condition,"Rheumatism,Wind humour",TM2-SI520,Siddha Materia Medica,A condition of Rheumatism characterized by Wind humour in Siddha Condition context.
+AY032,Unmada,Ayurvedic Disease,"Insanity,Psychosis",TM2-AY356,Charaka Samhita,A condition of Insanity characterized by Psychosis in Ayurvedic Disease context.
+YO022,Stress Management,Yoga Therapy,"Anxiety,Mental peace",TM2-YO165,Yoga Sutras,A condition of Anxiety characterized by Mental peace in Yoga Therapy context.
+YO023,Prenatal Yoga,Yoga Therapy,"Pregnancy Care,Ante-natal",TM2-YO109,Yoga Sutras,A condition of Pregnancy Care characterized by Ante-natal in Yoga Therapy context.
+HO027,Ignatia State,Homeopathic Indication,"Grief,Hysteria",TM2-HO128,Organon of Medicine,A condition of Grief characterized by Hysteria in Homeopathic Indication context.
+SI036,Sobai,Siddha Condition,"Anemia,Low blood",TM2-SI906,Siddha Materia Medica,A condition of Anemia characterized by Low blood in Siddha Condition context.
+HO028,Bryonia State,Homeopathic Indication,"Dry Cough,Worse motion",TM2-HO947,Organon of Medicine,A condition of Dry Cough characterized by Worse motion in Homeopathic Indication context.
+HO029,Bryonia State,Homeopathic Indication,"Dry Cough,Worse motion",TM2-HO405,Organon of Medicine,A condition of Dry Cough characterized by Worse motion in Homeopathic Indication context.
+SI037,Vatham,Siddha Condition,"Rheumatism,Wind humour",TM2-SI923,Siddha Materia Medica,A condition of Rheumatism characterized by Wind humour in Siddha Condition context.
+YO024,Back Pain Management,Yoga Therapy,"Lumbar Spondylosis,Spine care",TM2-YO569,Yoga Sutras,A condition of Lumbar Spondylosis characterized by Spine care in Yoga Therapy context.
+SI038,Mega Noi,Siddha Condition,"Venereal Disease,STD",TM2-SI124,Siddha Materia Medica,A condition of Venereal Disease characterized by STD in Siddha Condition context.
+SI039,Sanni,Siddha Condition,"Delirium,Coma like",TM2-SI611,Siddha Materia Medica,A condition of Delirium characterized by Coma like in Siddha Condition context.
+SI040,Sobai,Siddha Condition,"Anemia,Low blood",TM2-SI278,Siddha Materia Medica,A condition of Anemia characterized by Low blood in Siddha Condition context.
+UN030,Zukan,Unani Disease,"Common Cold,Running nose",TM2-UN306,Canon of Medicine,A condition of Common Cold characterized by Running nose in Unani Disease context.

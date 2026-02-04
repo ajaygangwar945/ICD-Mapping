@@ -52,8 +52,7 @@ The project follows a modern decoupled architecture:
 ├── backend/                # FastAPI Backend
 │   ├── app/                # Application logic
 │   │   ├── api/            # API endpoints & routing
-│   │   ├── core/           # Configuration & security
-│   │   ├── data/           # Database models & schemas
+│   │   ├── data/           # Static data & resources
 │   │   └── services/       # Business logic & mapping engine
 │   ├── static/             # Frontend production build (generated)
 │   ├── requirements.txt    # Backend dependencies

@@ -35,7 +35,7 @@ const features = [
         description: "Seamless translation between coding systems",
         color: "text-purple-500",
         bgColor: "bg-purple-500/10",
-        link: "/search"
+        link: "/translation"
     },
     {
         icon: Shield,
@@ -51,7 +51,7 @@ const features = [
         description: "Real-time insights and reporting",
         color: "text-violet-500",
         bgColor: "bg-violet-500/10",
-        link: "/"
+        link: "/dashboard"
     },
     {
         icon: Globe,
@@ -69,14 +69,6 @@ const features = [
         bgColor: "bg-emerald-500/10",
         link: "/fhir"
     },
-    {
-        icon: Sparkles,
-        title: "Translation",
-        description: "Translate between terminology systems",
-        color: "text-pink-500",
-        bgColor: "bg-pink-500/10",
-        link: "/search"
-    }
 ];
 
 export const Landing = () => {
