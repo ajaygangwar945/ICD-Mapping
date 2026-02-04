@@ -53,13 +53,17 @@ The project follows a modern decoupled architecture:
 │   ├── app/                # Application logic
 │   │   ├── api/            # API endpoints & routing
 │   │   ├── data/           # Static data & resources
-│   │   └── services/       # Business logic & mapping engine
+│   │   ├── services/       # Business logic & mapping engine
+│   │   └── main.py         # App entry point
 │   ├── static/             # Frontend production build (generated)
 │   ├── requirements.txt    # Backend dependencies
 │   └── venv/               # Python virtual environment
 ├── frontend/               # React Frontend
 │   ├── src/                # Source code
+│   │   ├── assets/         # Static assets & images
 │   │   ├── components/     # Reusable UI components
+│   │   ├── config/         # App configuration
+│   │   ├── lib/            # Utility libraries
 │   │   ├── pages/          # Application views
 │   │   ├── App.tsx         # Main app entry point
 │   │   └── main.tsx        # React mounting point
@@ -70,6 +74,7 @@ The project follows a modern decoupled architecture:
 ├── main.py                 # Root entry point (Production)
 ├── pyproject.toml          # Project configuration
 ├── render.yaml             # Render deployment config
+├── run_monolith.bat        # Windows build & run script
 └── README.md               # Project documentation
 ```
 
