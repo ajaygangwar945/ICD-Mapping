@@ -3,15 +3,12 @@ import { Shield, Lock, CheckCircle, Smartphone, Key, Fingerprint, RefreshCw, Fil
 import { useState } from "react";
 
 export const Settings = () => {
-    const [isConnecting, setIsConnecting] = useState(false);
     const [status, setStatus] = useState<"idle" | "connecting" | "connected">("idle");
 
     const handleConnect = () => {
-        setIsConnecting(true);
         setStatus("connecting");
         // Simulate OAuth flow
         setTimeout(() => {
-            setIsConnecting(false);
             setStatus("connected");
         }, 2000);
     };
@@ -74,8 +71,8 @@ export const Settings = () => {
                             onClick={handleConnect}
                             disabled={status !== "idle"}
                             className={`w-full py-5 rounded-2xl font-bold text-lg shadow-xl transition-all flex items-center justify-center gap-3 group/btn relative overflow-hidden ${status === "connected"
-                                    ? "bg-green-500 text-white cursor-default"
-                                    : "bg-amber-500 text-white hover:bg-amber-600 hover:-translate-y-1 active:translate-y-0 shadow-amber-500/25"
+                                ? "bg-green-500 text-white cursor-default"
+                                : "bg-amber-500 text-white hover:bg-amber-600 hover:-translate-y-1 active:translate-y-0 shadow-amber-500/25"
                                 }`}
                         >
                             {status === "idle" && (
