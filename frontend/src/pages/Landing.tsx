@@ -77,7 +77,7 @@ export const Landing = () => {
             {/* Hero Section */}
             <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-primary-foreground">
                 {/* Decorative SVGs */}
-                <div className="absolute inset-0 opacity-10 pointer-events-none">
+                <div className="absolute inset-0 opacity-10 pointer-events-none" aria-hidden="true">
                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <circle cx="10" cy="10" r="20" fill="currentColor" stroke="none" />
                         <circle cx="90" cy="90" r="30" fill="currentColor" stroke="none" />
@@ -85,30 +85,30 @@ export const Landing = () => {
                     </svg>
                 </div>
 
-                <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24 text-center">
+                <div className="relative max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-24 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="space-y-6"
+                        className="space-y-4 md:space-y-6"
                     >
-                        <div className="flex items-center justify-center gap-6 mb-8 text-primary-foreground/80">
-                            <Sparkles className="w-12 h-12" />
-                            <Zap className="w-12 h-12" />
-                            <Globe className="w-12 h-12" />
-                            <Shield className="w-12 h-12" />
+                        <div className="flex items-center justify-center gap-4 md:gap-6 mb-6 md:mb-8 text-primary-foreground/80">
+                            <Sparkles className="w-8 h-8 md:w-12 md:h-12" />
+                            <Zap className="w-8 h-8 md:w-12 md:h-12" />
+                            <Globe className="w-8 h-8 md:w-12 md:h-12" />
+                            <Shield className="w-8 h-8 md:w-12 md:h-12" />
                         </div>
 
-                        <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">
+                        <h1 className="text-3xl md:text-6xl font-bold tracking-tight mb-2 md:mb-4 px-2">
                             Ayush Intelligence & FHIR
                         </h1>
-                        <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-base md:text-xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed px-4">
                             Advanced Healthcare Interoperability Platform for seamless medical data exchange,
                             coding system translation, and FHIR compliance
                         </p>
 
-                        <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+                        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 pt-2 md:pt-4">
                             {["Core Features", "Coding Systems", "FHIR Compliant"].map((tag) => (
-                                <span key={tag} className="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium">
+                                <span key={tag} className="px-3 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-[10px] md:text-sm font-medium">
                                     {tag}
                                 </span>
                             ))}
@@ -116,42 +116,41 @@ export const Landing = () => {
 
                         <Link
                             to="/dashboard"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary rounded-full font-semibold hover:bg-primary-foreground transition-all transform hover:scale-105 shadow-2xl mt-8"
+                            className="inline-flex items-center gap-2 px-6 py-3.5 md:px-8 md:py-4 bg-white text-primary rounded-full font-bold hover:bg-primary-foreground transition-all transform hover:scale-105 shadow-2xl mt-6 md:mt-8 text-sm md:text-base"
                         >
                             Explore Platform
-                            <ArrowRight className="w-5 h-5" />
+                            <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
                         </Link>
                     </motion.div>
                 </div>
 
-                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-gradient-to-t from-background to-transparent" />
             </section>
 
             {/* Welcome Section */}
-            <section className="py-24 bg-background relative overflow-hidden">
+            <section className="py-12 md:py-24 bg-background relative overflow-hidden">
                 {/* Background Decoration */}
-                <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+                <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 md:w-96 md:h-96 bg-primary/5 rounded-full blur-3xl opacity-50" />
 
-                <div className="max-w-7xl mx-auto px-6 md:px-8 relative">
+                <div className="max-w-7xl mx-auto px-4 md:px-8 relative">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-center mb-20"
+                        className="text-center mb-12 md:mb-20"
                     >
-                        <h2 className="text-4xl font-bold mb-6">
+                        <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 leading-tight">
                             <span className="text-primary italic">Welcome to the Future</span>
-                            <br />
-                            <span className="text-foreground">of Healthcare Interoperability</span>
+                            <br className="hidden sm:block" />
+                            <span className="text-foreground"> of Healthcare Interoperability</span>
                         </h2>
-                        <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
+                        <p className="text-muted-foreground max-w-3xl mx-auto text-sm md:text-lg leading-relaxed px-2">
                             Experience the next generation of medical data exchange with our comprehensive platform
-                            that seamlessly connects different healthcare coding systems, ensuring interoperability and
-                            compliance across the healthcare ecosystem.
+                            that seamlessly connects different healthcare coding systems, ensuring interoperability.
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
                         {features.slice(0, 4).map((feature, idx) => (
                             <motion.div
                                 key={feature.title}
@@ -162,15 +161,15 @@ export const Landing = () => {
                             >
                                 <Link
                                     to={feature.link}
-                                    className="block h-full p-8 bg-card border border-border rounded-3xl hover:border-primary/50 transition-all hover:-translate-y-2 group shadow-sm hover:shadow-xl"
+                                    className="block h-full p-6 md:p-8 bg-card border border-border rounded-2xl md:rounded-3xl hover:border-primary/50 transition-all hover:-translate-y-2 group shadow-sm hover:shadow-xl"
                                 >
-                                    <div className={`w-12 h-12 md:w-14 md:h-14 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform`}>
-                                        <feature.icon className={`w-6 h-6 md:w-7 md:h-7 ${feature.color}`} />
+                                    <div className={`w-10 h-10 md:w-14 md:h-14 ${feature.bgColor} rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform`}>
+                                        <feature.icon className={`w-5 h-5 md:w-7 md:h-7 ${feature.color}`} />
                                     </div>
-                                    <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 group-hover:text-primary transition-colors">
+                                    <h3 className="text-base md:text-xl font-bold mb-2 md:mb-3 group-hover:text-primary transition-colors">
                                         {feature.title}
                                     </h3>
-                                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">{feature.description}</p>
+                                    <p className="text-xs md:text-base text-muted-foreground leading-relaxed italic line-clamp-2">{feature.description}</p>
                                 </Link>
                             </motion.div>
                         ))}
@@ -179,16 +178,16 @@ export const Landing = () => {
             </section>
 
             {/* Explore Features */}
-            <section className="py-24 bg-muted/30">
-                <div className="max-w-7xl mx-auto px-6 md:px-8 text-center mb-12 md:mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Explore Our Features</h2>
-                    <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+            <section className="py-12 md:py-24 bg-muted/30 px-4">
+                <div className="max-w-7xl mx-auto md:px-8 text-center mb-10 md:mb-16">
+                    <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">Explore Our Features</h2>
+                    <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-lg px-2">
                         Navigate through our comprehensive healthcare interoperability platform using
                         the sidebar or the quick access cards below.
                     </p>
                 </div>
 
-                <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div className="max-w-7xl mx-auto md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
                     {features.map((feature, idx) => (
                         <motion.div
                             key={feature.title}
@@ -199,57 +198,57 @@ export const Landing = () => {
                         >
                             <Link
                                 to={feature.link}
-                                className="block p-8 bg-card rounded-3xl border border-border hover:border-primary hover:shadow-2xl transition-all group"
+                                className="block p-6 md:p-8 bg-card rounded-2xl md:rounded-3xl border border-border hover:border-primary hover:shadow-2xl transition-all group"
                             >
-                                <div className={`w-12 h-12 ${feature.bgColor} rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform`}>
-                                    <feature.icon className={`w-6 h-6 ${feature.color}`} />
+                                <div className={`w-10 h-10 ${feature.bgColor} rounded-lg md:rounded-xl flex items-center justify-center mb-4 md:mb-6 group-hover:rotate-12 transition-transform`}>
+                                    <feature.icon className={`w-5 h-5 ${feature.color}`} />
                                 </div>
-                                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                                <p className="text-muted-foreground mb-6 italic">{feature.description}</p>
-                                <span className="text-primary font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+                                <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3">{feature.title}</h3>
+                                <p className="text-xs md:text-base text-muted-foreground mb-4 md:mb-6 italic">{feature.description}</p>
+                                <span className="text-primary font-bold flex items-center gap-2 group-hover:gap-3 transition-all text-sm md:text-base">
                                     Get started
-                                    <ArrowRight className="w-5 h-5" />
+                                    <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
                                 </span>
                             </Link>
                         </motion.div>
                     ))}
                 </div>
 
-                <div className="text-center mt-20">
+                <div className="text-center mt-12 md:mt-20">
                     <Link
                         to="/dashboard"
-                        className="inline-flex items-center gap-3 px-10 py-5 bg-primary text-primary-foreground rounded-full font-bold hover:scale-105 transition-all shadow-xl hover:shadow-primary/20"
+                        className="inline-flex items-center gap-2 md:gap-3 px-8 py-4 md:px-10 md:py-5 bg-primary text-primary-foreground rounded-full font-bold hover:scale-105 transition-all shadow-xl hover:shadow-primary/20 text-sm md:text-lg"
                     >
-                        <BarChart3 className="w-6 h-6" />
+                        <BarChart3 className="w-5 h-5 md:w-6 md:h-6" />
                         Go to Dashboard
                     </Link>
                 </div>
             </section>
 
             {/* Final Call to Action */}
-            <section className="py-20 relative overflow-hidden">
+            <section className="py-12 md:py-20 relative overflow-hidden px-4">
                 <div className="absolute inset-0 bg-primary opacity-[0.03]" />
-                <div className="max-w-7xl mx-auto px-8 text-center relative">
+                <div className="max-w-7xl mx-auto md:px-8 text-center relative">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="flex flex-col items-center gap-4"
+                        className="flex flex-col items-center gap-3 md:gap-4"
                     >
-                        <div className="p-4 bg-primary/10 rounded-2xl">
-                            <Sparkles className="w-8 h-8 text-primary animate-pulse" />
+                        <div className="p-3 md:p-4 bg-primary/10 rounded-2xl">
+                            <Sparkles className="w-6 h-6 md:w-8 md:h-8 text-primary animate-pulse" />
                         </div>
-                        <h2 className="text-3xl font-bold">Ready to Transform Your Healthcare Data?</h2>
-                        <p className="text-muted-foreground max-w-xl mx-auto">
+                        <h2 className="text-xl md:text-3xl font-bold leading-tight">Ready to Transform Your Healthcare Data?</h2>
+                        <p className="text-muted-foreground text-sm md:text-base max-w-xl mx-auto italic">
                             Join the next generation of interoperable healthcare platforms today.
                         </p>
-                        <div className="flex gap-4 mt-4">
-                            <span className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
-                                <Zap className="w-4 h-4 text-primary" />
+                        <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-2 md:mt-4">
+                            <span className="flex items-center gap-1.5 md:gap-2 text-[10px] md:text-sm font-medium text-muted-foreground">
+                                <Zap className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
                                 Instant Deployment
                             </span>
-                            <span className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
-                                <Shield className="w-4 h-4 text-primary" />
+                            <span className="flex items-center gap-1.5 md:gap-2 text-[10px] md:text-sm font-medium text-muted-foreground">
+                                <Shield className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
                                 Enterprise Security
                             </span>
                         </div>
@@ -257,18 +256,18 @@ export const Landing = () => {
                 </div>
             </section>
 
-            <footer className="py-10 md:py-12 border-t border-border bg-card">
-                <div className="max-w-7xl mx-auto px-6 md:px-8 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
-                    <div className="flex items-center gap-3">
-                        <img src="/favicon.svg" alt="Ayush Intelligence Logo" className="w-10 h-10 rounded-xl" />
-                        <span className="font-bold text-xl">Ayush Intelligence</span>
+            <footer className="py-8 md:py-12 border-t border-border bg-card">
+                <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
+                    <div className="flex items-center gap-2 md:gap-3">
+                        <img src="/favicon.svg" alt="Ayush Intelligence Logo" className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl" />
+                        <span className="font-bold text-lg md:text-xl">Ayush Intelligence</span>
                     </div>
-                    <div className="text-muted-foreground text-sm italic">
+                    <div className="text-muted-foreground text-[10px] md:text-sm italic order-3 md:order-2">
                         © 2026 Ayush Intelligence Platform
                     </div>
-                    <div className="flex gap-6">
-                        <Link to="/settings" className="text-sm text-muted-foreground hover:text-primary">Privacy Policy</Link>
-                        <Link to="/settings" className="text-sm text-muted-foreground hover:text-primary">Terms of Service</Link>
+                    <div className="flex gap-4 md:gap-6 order-2 md:order-3">
+                        <Link to="/settings" className="text-xs md:text-sm text-muted-foreground hover:text-primary font-medium">Privacy</Link>
+                        <Link to="/settings" className="text-xs md:text-sm text-muted-foreground hover:text-primary font-medium">Terms</Link>
                     </div>
                 </div>
             </footer>

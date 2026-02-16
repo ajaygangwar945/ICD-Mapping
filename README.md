@@ -29,11 +29,12 @@ The project is fully deployed and accessible online.
 
 ## ✨ Key Features
 
-- 🧠 **Neural Mapping Engine**: Intelligent search and translation between NAMASTE and ICD-11.
-- 📱 **Mobile First Design**: Fully responsive UI that works seamlessly on any device.
-- 🌓 **Adaptive Theming**: Premium dark and light modes with glassmorphic aesthetics.
-- 🏥 **FHIR R4 Integration**: Native support for healthcare terminology resources.
-- ⚡ **High Performance**: Built with Vite and FastAPI for sub-second response times.
+- 🧠 **Neural Mapping Engine**: Intelligent search and translation between NAMASTE and ICD-11 with a 1000+ term dataset.
+- 📱 **Mobile-First Responsiveness**: Hand-crafted UI optimized for every breakpoint from 375px (Mobile) to 1440px+ (Desktop).
+- 🌓 **Adaptive Theming**: Premium dark and light modes with custom-tuned gradients and glassmorphism.
+- 🏥 **FHIR R4 Integration**: Native support for FHIR JSON resource generation and schema synchronization.
+- ⚡ **High Performance**: Optimized Vite build and FastAPI backend for lightning-fast sub-second responses.
+- 🛠️ **Unified Deployment**: Single-command build and run system using `run_monolith.bat`.
 
 ---
 
@@ -41,9 +42,9 @@ The project is fully deployed and accessible online.
 
 The project follows a modern decoupled architecture:
 
-- **`/frontend`**: React + Vite + TailwindCSS + Lucide Icons.
-- **`/backend`**: FastAPI + Python 3.11 + Pydantic.
-- **`/backend/static`**: Production build of the frontend served via the backend.
+- **`/frontend`**: React + Vite + TailwindCSS + Lucide Icons + Framer Motion.
+- **`/backend`**: FastAPI + Python 3.14 + Pydantic + Neural Mapping Engine.
+- **`/backend/static`**: Production build of the frontend served via the backend for a unified deployment experience.
 
 ## 📂 File Structure
 
@@ -52,40 +53,29 @@ The project follows a modern decoupled architecture:
 ├── backend/                # FastAPI Backend
 │   ├── app/                # Application logic
 │   │   ├── api/            # API endpoints & routing
-│   │   │   ├── routes.py   # Main mapping endpoints
-│   │   │   └── settings.py # Auth & Audit configuration API
-│   │   ├── data/           # Static data & resources
-│   │   │   └── settings.json # Persisted configuration
-│   │   ├── services/       # Business logic & mapping engine
-│   │   └── main.py         # App entry point
-│   ├── static/             # Frontend production build (generated)
-│   ├── requirements.txt    # Backend dependencies
-│   └── venv/               # Python virtual environment
+│   │   │   ├── routes.py   # Main mapping & search endpoints
+│   │   │   └── settings.py # Auth & Gateway configuration API
+│   │   ├── data/           # Persistent data storage
+│   │   │   ├── settings.json # Persisted configuration
+│   │   │   └── sample-namaste.csv # 1000+ medical terms
+│   │   ├── services/       # Neural mapping & business logic
+│   │   └── main.py         # FastAPI instance & static file server
+│   ├── static/             # Compiled Frontend (Production)
+│   └── requirements.txt    # Backend dependencies
 ├── frontend/               # React Frontend
 │   ├── src/                # Source code
-│   │   ├── assets/         # Static assets & images
-│   │   ├── components/     # Reusable UI components
-│   │   │   ├── layout/     # Layout components (Sidebar, etc.)
-│   │   │   └── ui/         # UI primitives
-│   │   ├── config/         # App configuration
-│   │   ├── lib/            # Utility libraries
-│   │   ├── pages/          # Application views
-│   │   │   ├── Dashboard.tsx
-│   │   │   ├── Search.tsx
-│   │   │   ├── Translation.tsx
-│   │   │   ├── DataIngestion.tsx
-│   │   │   ├── FhirResources.tsx
-│   │   │   └── Settings.tsx # Auth & Audit page
-│   │   ├── App.tsx         # Main app entry point
-│   │   └── main.tsx        # React mounting point
+│   │   ├── assets/         # Design system & images
+│   │   ├── components/     # UI Core components
+│   │   ├── pages/          # All application views (Landing, Dashboard, etc.)
+│   │   └── App.tsx         # Root component & Routing
 │   ├── public/             # Static assets
 │   ├── package.json        # Frontend dependencies
-│   └── vite.config.ts      # Vite configuration
-├── build.sh                # Unified build script
-├── main.py                 # Root entry point (Production)
-├── pyproject.toml          # Project configuration
-├── render.yaml             # Render deployment config
-├── run_monolith.bat        # Windows build & run script
+│   └── vite.config.ts      # Dev server & reverse-proxy config
+├── build.sh                # Unified build/deploy script (Bash)
+├── main.py                 # Unified root entry point
+├── pyproject.toml          # Dev environment configuration
+├── render.yaml             # Cloud deployment configuration
+├── run_monolith.bat        # Windows automation script
 └── README.md               # Project documentation
 ```
 
@@ -97,14 +87,19 @@ The project follows a modern decoupled architecture:
 
 | Tool | Version |
 | :--- | :--- |
-| **Python** | 3.11+ |
+| **Python** | 3.14+ |
 | **Node.js** | 18.x or later |
-| **Git** | Latest |
+| **Git** | Optional |
 
-### 1. Development Mode (Hot-Reloading)
+### 1. Unified Run (Recommended)
 
-> [!NOTE]
-> Recommended for testing UI changes and API adjustments.
+To run the entire platform as a single unit on Windows:
+
+```bash
+run_monolith.bat
+```
+
+### 2. Manual Development Mode (Hot-Reloading)
 
 #### **Backend**
 
@@ -124,21 +119,13 @@ npm install
 npm run dev
 ```
 
-*Access at: [http://localhost:5173](http://localhost:5173)*
-
-### 2. Production Mode (Unified)
-
-> [!TIP]
-> Use this to test the final application as a single package.
-
-1. Build frontend: `cd frontend && npm run build`
-2. Run automation: `run_monolith.bat`
+*Frontend: [http://localhost:5173](http://localhost:5173)* | *Backend API: [http://localhost:8000/health](http://localhost:8000/health)*
 
 ---
 
 <div align="center">
 
-⭐ Star this repository if you found it useful  
-🧠 Bridging Traditional Ayush Wisdom with ICD-11 Standards  
+⭐ Created for SIH 2026 - Ayush Intelligence & ICD-11 Integration  
+🌊 Seamlessly Bridging Traditional Wisdom with Global Standards  
 
 </div>

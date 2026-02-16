@@ -39,12 +39,12 @@ export const Search = () => {
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-center space-y-3"
+        className="text-center space-y-4 px-4"
       >
-        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-violet-500 bg-clip-text text-transparent">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary via-violet-500 to-indigo-600 bg-clip-text text-transparent px-2">
           Ayush Intelligence Search
         </h1>
-        <p className="text-muted-foreground md:text-xl max-w-2xl mx-auto italic text-sm">
+        <p className="text-muted-foreground text-sm md:text-xl max-w-2xl mx-auto italic leading-relaxed">
           Map traditional terminology to globally recognized medical standards with neural accuracy.
         </p>
       </motion.div>

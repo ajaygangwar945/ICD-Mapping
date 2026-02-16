@@ -57,18 +57,20 @@ export const Dashboard = () => {
                         <TrendingUp className="w-4 h-4" />
                         System Status: Operational
                     </div>
-                    <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Dashboard Overview</h1>
-                    <p className="text-muted-foreground text-lg max-w-2xl">
+                    <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+                        Dashboard Overview
+                    </h1>
+                    <p className="text-muted-foreground text-sm md:text-lg max-w-2xl leading-relaxed italic">
                         Real-time intelligence and analytics for Ayush healthcare interoperability and ICD-11 mapping.
                     </p>
                 </div>
 
-                <div className="flex gap-3">
-                    <button className="flex-1 md:flex-none px-4 md:px-6 py-3 bg-muted hover:bg-muted/80 rounded-xl font-bold transition-all flex items-center justify-center gap-2 text-sm md:text-base">
+                <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                    <button className="flex-1 sm:flex-none px-6 py-3 bg-muted hover:bg-muted/80 rounded-xl font-bold transition-all flex items-center justify-center gap-2 text-sm md:text-base border border-border">
                         <FileText className="w-4 h-4" />
                         Export
                     </button>
-                    <button className="flex-1 md:flex-none px-4 md:px-6 py-3 bg-primary text-primary-foreground rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-all flex items-center justify-center gap-2 text-sm md:text-base">
+                    <button className="flex-1 sm:flex-none px-6 py-3 bg-primary text-primary-foreground rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-all flex items-center justify-center gap-2 text-sm md:text-base">
                         <Sparkles className="w-4 h-4" />
                         Live Sync
                     </button>
