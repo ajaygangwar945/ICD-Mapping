@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.openapi.docs import get_swagger_ui_html
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
@@ -8,9 +9,11 @@ from app.api.settings import router as settings_router
 
 # Create FastAPI app instance
 app = FastAPI(
-    title="AYUSH FHIR Integration Platform",
+    title="Ayush Intelligence",
     description="API for integrating AYUSH systems with FHIR standards",
-    version="2.0.0"
+    version="2.0.0",
+    docs_url=None,  # Disable default docs to serve custom UI
+    redoc_url=None
 )
 
 # Configure CORS
@@ -25,6 +28,14 @@ app.add_middleware(
 # Include API routes
 app.include_router(api_router)
 app.include_router(settings_router)
+
+@app.get("/docs", include_in_schema=False)
+async def custom_swagger_ui_html():
+    return get_swagger_ui_html(
+        openapi_url=app.openapi_url,
+        title=app.title + " - API Docs",
+        swagger_favicon_url="/favicon.svg"
+    )
 
 @app.get("/health")
 async def health_check():

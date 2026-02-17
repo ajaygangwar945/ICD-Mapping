@@ -1,1 +1,5 @@
-{"test": "value"}
+{
+    "client_id": "",
+    "callback_url": "",
+    "environment": "Sandbox Gateway v2.4"
+}

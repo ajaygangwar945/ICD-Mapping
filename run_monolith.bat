@@ -22,9 +22,9 @@ echo [*] Starting Unified Server...
 cd backend
 if not exist "venv" (
     echo [*] Creating virtual environment...
-    python -m venv venv
+    "C:\Users\ajayg\AppData\Local\Programs\Python\Python314\python.exe" -m venv venv
 )
 call .\venv\Scripts\activate
 pip install -r requirements.txt
 echo [!] Server starting at http://localhost:8000
-python -m uvicorn app.main:app --reload --port 8000
+"C:\Users\ajayg\AppData\Local\Programs\Python\Python314\python.exe" -m uvicorn app.main:app --reload --port 8000
