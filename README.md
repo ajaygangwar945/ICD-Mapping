@@ -1,6 +1,6 @@
 <img align="center" src="frontend/public/Gemini_Generated_Image_bxbcikbxbcikbxbc.png" width="100%" height="200" style="object-fit: cover">
 
-<h1 align="center"> 🏥 Ayush ICD-11 Mapping Platform</h1>
+<h1 align="center"> 🏥 Ayush Intelligence</h1>
 <div align="center">
 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
@@ -119,7 +119,7 @@ npm install
 npm run dev
 ```
 
-*Frontend: [http://localhost:5173](http://localhost:5173)* | *Backend API: [http://localhost:8000/health](http://localhost:8000/health)*
+*Frontend: [http://localhost:5173](http://localhost:5173)* | *Backend API: [http://localhost:8000/health](http://localhost:8000/health)* | *API Docs: [http://localhost:8000/docs](http://localhost:8000/docs)*
 
 ---
 
