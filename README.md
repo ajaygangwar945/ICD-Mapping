@@ -56,21 +56,28 @@ The project follows a modern decoupled architecture:
 │   │   │   ├── routes.py   # Main mapping & search endpoints
 │   │   │   └── settings.py # Auth & Gateway configuration API
 │   │   ├── data/           # Persistent data storage
+│   │   │   ├── search-results.json # Neural mapping ledger rules
 │   │   │   ├── settings.json # Persisted configuration
 │   │   │   └── sample-namaste.csv # 1000+ medical terms
 │   │   ├── services/       # Neural mapping & business logic
-│   │   └── main.py         # FastAPI instance & static file server
+│   │   │   └── mapping_service.py # Mapping Engine Logic
+│   │   ├── main.py         # FastAPI instance & static file server
+│   │   └── test_import.py  # Backend test script
 │   ├── static/             # Compiled Frontend (Production)
 │   └── requirements.txt    # Backend dependencies
-├── frontend/               # React Frontend
+├── frontend/               # React Frontend (Vite + TailwindCSS)
 │   ├── src/                # Source code
 │   │   ├── assets/         # Design system & images
 │   │   ├── components/     # UI Core components
 │   │   ├── pages/          # All application views (Landing, Dashboard, etc.)
-│   │   └── App.tsx         # Root component & Routing
+│   │   ├── App.tsx         # Root component & Routing
+│   │   ├── index.css       # Global styles & Tailwind
+│   │   └── main.tsx        # React entry point
 │   ├── public/             # Static assets
 │   ├── package.json        # Frontend dependencies
+│   ├── tailwind.config.js  # Tailwind CSS configuration
 │   └── vite.config.ts      # Dev server & reverse-proxy config
+├── details.txt             # Comprehensive Project Details Documentation
 ├── build.sh                # Unified build/deploy script (Bash)
 ├── main.py                 # Unified root entry point
 ├── pyproject.toml          # Dev environment configuration

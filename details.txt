@@ -1,0 +1,90 @@
+# Ayush Intelligence (ICD-Mapping) - Comprehensive Project Details
+
+## 🌟 1. Project Overview
+Ayush Intelligence is a premium, state-of-the-art healthcare interoperability platform. Its primary goal is to map traditional Ayush (Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy) medical terminology—specifically NAMASTE (National Ayush Morbidity and Standardized Terminologies Electronic) codes—to modern global healthcare standards like ICD-11 (International Classification of Diseases 11th Revision) and FHIR R4 (Fast Healthcare Interoperability Resources).
+
+This promotes standardized digital health records, enabling seamless integration of traditional Indian medicine into global healthcare IT infrastructures.
+
+---
+
+## 🛠️ 2. Technology Stack & Dependencies
+
+### Frontend (Client-Side)
+The frontend is designed for a premium, mobile-first experience with a focus on high-performance animations and responsive design.
+
+- **Core**: React 19+ (with React DOM) & Vite for lighting-fast builds.
+- **Styling**: TailwindCSS v4 with `@tailwindcss/postcss`. It uses custom-tuned gradients, dark/light mode adaptable theming, and glassmorphism UI elements. Tailwind-merge and clsx are used for dynamic class processing.
+- **Routing**: `react-router-dom` v7 for handling client-side SPA (Single Page Application) navigation (e.g., Dashboard, Search, Settings, FHIR views).
+- **Animations & UI**: 
+  - `framer-motion` for smooth, high-fps micro-interactions and page transitions.
+  - `lucide-react` for scalable, modern iconography.
+  - `@radix-ui/react-slot` for accessible component foundations.
+- **Data Visualization**: `recharts` for rendering analytics and usage statistics on the dashboard.
+- **Language**: TypeScript throughout the source code (`tsconfig` and `eslint` tightly configured) to ensure type safety.
+
+### Backend (Server-Side)
+The backend is a high-performance Python application built to handle the Neural Mapping Engine natively.
+
+- **Core Framework**: FastAPI (python 3.11+) combined with the Uvicorn ASGI server to handle sub-second asynchronous responses.
+- **Data Validation**: Pydantic v2 utilized heavily for strict parsing and serialization of API request/response payloads (e.g., `SearchRequest`, `MappingResult`, `TranslationResult`).
+- **Data Processing/Mapping Engine**: 
+  - `pandas` is used to load and perform vectorized queries on the 1000+ term CSV dataset (`sample-namaste.csv`).
+  - Native Python `json` parsing to handle dynamic search results and supplementary ICD-11 mapping rules (`search-results.json`).
+- **File Parsing & Templating**: `python-multipart` for handling file uploads (if ingestion occurs), and `jinja2` for advanced templating needs (if rendering any dynamic static elements).
+
+---
+
+## 🏗️ 3. Application Architecture & Deployment
+
+The system follows a **Monolithic SPA-Gateway deployment pattern** utilizing a decoupled codebase but a unified deployment environment.
+
+- **/frontend**: Operates entirely as a standalone Vite application during development (`npm run dev` at localhost:5173).
+- **/backend**: Evaluates endpoints (`/api/search`, `/api/translate`) and business logic independently (`uvicorn` at localhost:8000).
+- **Production Monolith (`run_monolith.bat` / `build.sh`)**: 
+  1. The frontend React code is built into a strictly static production bundle.
+  2. The generated `/dist` files are shifted into `/backend/static/`.
+  3. FastAPI is configured (`main.py`) to intercept all API requests on `/api`, but acts as a static file server returning `/static/index.html` on any other route.
+  4. This allows the heavy AI backend to natively serve the frontend with zero-configuration CORS issues and a single cloud entry point (configured via `render.yaml` for Render.com deployment).
+
+---
+
+## 🧠 4. Neural Mapping Engine Logic (How it Works)
+
+The core functionality of the platform lives in `backend/app/services/mapping_service.py`. This class loads healthcare data into memory on server startup for instantaneous search responses.
+
+### Data Sources
+1. **`sample-namaste.csv`**: Contains thousands of raw AYUSH terms, their associated IDs, categories, synonyms, and manual mappings to ICD-11 TM2 codes.
+2. **`search-results.json`**: Acts as a secondary neural mapping ledger, defining complex partial/exact matches and advanced ICD-11 relationships.
+
+### Search and Translation Algorithm
+When a user searches for a term (e.g., "Jwara"):
+1. **JSON Pass (High Priority)**: The engine first scans the parsed JSON ledger. If the term matches a "label" or any "synonym", it prepares an immediate response.
+   - Exact query matches yield a `0.95` (95%) confidence score.
+   - Partial regex/contains matches yield an `0.85` confidence score.
+2. **Vectorized CSV Pass (Complementary)**: The engine searches the loaded Pandas DataFrame (`self.df`) targeting "term" and "synonyms" via case-insensitive matching.
+   - Found CSV entities generate an ICD-11 match directly or label as "No Direct Match".
+   - CSV fallback matches yield a static `0.80` confidence score.
+3. The aggregated array of mappings is capped by a generic request `limit` (default heavily tuned to 10) and delivered to the frontend as a typed `MappingResult` array.
+
+---
+
+## 🏥 5. FHIR Interoperability (Front-End Generation)
+
+To complete the interoperability pipeline, the project natively generates **FHIR R4 Standard (Fast Healthcare Interoperability Resources)** payloads.
+
+Inside the `FhirResources.tsx` module:
+- The UI exposes metrics detailing loaded resource types: `CodeSystem`, `ConceptMap`, `ValueSet`, and `Condition`.
+- Users can dynamically view and synchronize (copy) generated JSON resources mapping standard Ayurvedic principles into HL7 (Health Level Seven) FHIR compliant schema syntax (e.g., `CodeSystem` generation with url pointing to `http://terminology.hl7.org/CodeSystem/namaste-ayush`).
+
+---
+
+## 🚀 6. Full Working Flow
+
+1. **User Landing**: The user lands on the highly optimized, Framer-motion animated frontend served natively from the FastAPI static folder.
+2. **Interacting with Search/Dashboard**: The user inputs an Ayurvedic medical condition into the search bar. 
+3. **API Request**: The frontend generates a REST `POST /api/search` request with a payload holding the text query.
+4. **Backend Processing**: 
+   - FastAPI intercepts the request and feeds it into the `mapping_service.search()` engine.
+   - Pandas queries the loaded `.csv` while the python dictionaries cross-reference the `.json` ledger for high-confidence terminology matches.
+5. **Response Translation**: The engine combines the data, determines mapping confidence values, maps the NAMASTE ID to an ICD-11 ID, and securely returns it.
+6. **Delivery & FHIR validation**: The frontend visually maps the output into aesthetically pleasing charts and offers the option to generate FHIR standard integration JSONs for clinical systems.
